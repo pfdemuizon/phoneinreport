@@ -1,0 +1,35 @@
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001030)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.059344)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.166620)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.001912)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateReports (1)
+  [4;35;1mSQL (0.703156)[0m   [0mCREATE TABLE `reports` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `event_id` int(11) DEFAULT NULL, `campaign_id` int(11) DEFAULT NULL, `city` varchar(255) DEFAULT NULL, `state` varchar(255) DEFAULT NULL, `country` varchar(255) DEFAULT NULL, `latitude` float DEFAULT NULL, `longitude` float DEFAULT NULL, `phone` varchar(255) DEFAULT NULL, `phone_city` varchar(255) DEFAULT NULL, `phone_state` varchar(255) DEFAULT NULL, `file_status` varchar(255) DEFAULT NULL, `file_wav_url` varchar(255) DEFAULT NULL, `file_mp3_url` varchar(255) DEFAULT NULL, `length` int(11) DEFAULT NULL, `reporter_name` varchar(255) DEFAULT NULL, `reporter_email` varchar(255) DEFAULT NULL, `notes` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.027955)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.001442)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateCampaigns (2)
+  [4;36;1mSQL (0.082062)[0m   [0;1mCREATE TABLE `campaigns` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `event_feed_url` varchar(255) DEFAULT NULL, `pop_server` varchar(255) DEFAULT NULL, `pop_user` varchar(255) DEFAULT NULL, `pop_pw` varchar(255) DEFAULT NULL, `pop_port` int(11) DEFAULT NULL, `s3_bucket` varchar(255) DEFAULT NULL, `s3_key` varchar(255) DEFAULT NULL, `s3_user` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.001544)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.001863)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (3)
+  [4;35;1mSQL (0.034739)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `campaign_id` varchar(255) DEFAULT NULL, `password` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `first_name` varchar(255) DEFAULT NULL, `last_name` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001545)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.002336)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.032119)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.050820)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mSQL (0.011885)[0m   [0;1mdescribe `campaigns`[0m
+  [4;35;1mSQL (0.007833)[0m   [0mSHOW KEYS FROM `campaigns`[0m
+  [4;36;1mSQL (0.024795)[0m   [0;1mSHOW FIELDS FROM `reports`[0m
+  [4;35;1mSQL (0.012911)[0m   [0mdescribe `reports`[0m
+  [4;36;1mSQL (0.006317)[0m   [0;1mSHOW KEYS FROM `reports`[0m
+  [4;35;1mSQL (0.047653)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.008668)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.005926)[0m   [0mSHOW KEYS FROM `users`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000603)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.006736)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.050695)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mCampaign Columns (0.008490)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mSQL (0.005665)[0m   [0;1mSELECT count(*) AS count_all FROM `campaigns` [0m
