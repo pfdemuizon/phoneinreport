@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title> <%= @page_title ||= "Action Echo Tool" %></title>
+
+  <%= stylesheet_link_tag 'admin' %>
+  <%= stylesheet_link_tag 'application' %>
+  <%= javascript_include_tag :defaults %>
+  <%= yield :header %>
+</head>
+<body>
+
+<div id="container">
+  <div id="header">
+    <div id="main">
+      <div id="flash"><%= flash[:notice] %></div>
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <div id="branding">Action Echo Tool <%= link_to "Radical Designs", "http://radicaldesigns.org", :target => 'blank' %></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
