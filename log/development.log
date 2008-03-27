@@ -123,3 +123,804 @@ Migrating to AddCampaignToUser (4)
   [4;35;1mSQL (0.006543)[0m   [0mSHOW FIELDS FROM `users`[0m
   [4;36;1mSQL (0.008268)[0m   [0;1mdescribe `users`[0m
   [4;35;1mSQL (0.004676)[0m   [0mSHOW KEYS FROM `users`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000631)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.019531)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.000857)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.070566)[0m   [0mSELECT * FROM `users` WHERE (users.login IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.018954)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(users.email) = 'patrice@radicaldesigns.org') LIMIT 1[0m
+  [4;35;1mSQL (0.000669)[0m   [0mCOMMIT[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000680)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.001242)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.001465)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001329)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to AddCampaignToUser (4)
+  [4;36;1mSQL (0.226265)[0m   [0;1mALTER TABLE `users` DROP `campaign_id`[0m
+  [4;35;1mSQL (0.001150)[0m   [0mUPDATE schema_info SET version = 3[0m
+  [4;36;1mSQL (0.053580)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (3)
+  [4;35;1mSQL (0.004355)[0m   [0mDROP TABLE `users`[0m
+  [4;36;1mSQL (0.001141)[0m   [0;1mUPDATE schema_info SET version = 2[0m
+Reached target version: 2
+  [4;35;1mSQL (0.001296)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.001841)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006630)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mSQL (0.007183)[0m   [0;1mdescribe `campaigns`[0m
+  [4;35;1mSQL (0.005205)[0m   [0mSHOW KEYS FROM `campaigns`[0m
+  [4;36;1mSQL (0.017558)[0m   [0;1mSHOW FIELDS FROM `reports`[0m
+  [4;35;1mSQL (0.009925)[0m   [0mdescribe `reports`[0m
+  [4;36;1mSQL (0.005839)[0m   [0;1mSHOW KEYS FROM `reports`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000629)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001508)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.001083)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.001321)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUsers (3)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'users': DROP TABLE `users`[0m
+  [4;35;1mSQL (0.016651)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255) DEFAULT NULL, `crypted_password` varchar(40) DEFAULT NULL, `salt` varchar(40) DEFAULT NULL, `remember_token` varchar(255) DEFAULT NULL, `remember_token_expires_at` datetime DEFAULT NULL, `campaign_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.001077)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.001385)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.002092)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006668)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mSQL (0.007236)[0m   [0;1mdescribe `campaigns`[0m
+  [4;35;1mSQL (0.004922)[0m   [0mSHOW KEYS FROM `campaigns`[0m
+  [4;36;1mSQL (0.008037)[0m   [0;1mSHOW FIELDS FROM `reports`[0m
+  [4;35;1mSQL (0.008990)[0m   [0mdescribe `reports`[0m
+  [4;36;1mSQL (0.005969)[0m   [0;1mSHOW KEYS FROM `reports`[0m
+  [4;35;1mSQL (0.005775)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.006913)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.004770)[0m   [0mSHOW KEYS FROM `users`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000654)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.012461)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.001185)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.001009)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000966)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to AddHostToCampaign (4)
+  [4;35;1mSQL (0.096500)[0m   [0mALTER TABLE `campaigns` ADD `host` varchar(255)[0m
+  [4;36;1mSQL (0.001408)[0m   [0;1mUPDATE schema_info SET version = 4[0m
+  [4;35;1mSQL (0.001948)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.004363)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.006651)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mSQL (0.014120)[0m   [0;1mdescribe `campaigns`[0m
+  [4;35;1mSQL (0.005504)[0m   [0mSHOW KEYS FROM `campaigns`[0m
+  [4;36;1mSQL (0.007420)[0m   [0;1mSHOW FIELDS FROM `reports`[0m
+  [4;35;1mSQL (0.010145)[0m   [0mdescribe `reports`[0m
+  [4;36;1mSQL (0.005503)[0m   [0;1mSHOW KEYS FROM `reports`[0m
+  [4;35;1mSQL (0.005692)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.005810)[0m   [0;1mdescribe `users`[0m
+  [4;35;1mSQL (0.005189)[0m   [0mSHOW KEYS FROM `users`[0m
+  [4;36;1mCampaign Columns (0.007269)[0m   [0;1mSHOW FIELDS FROM `campaigns`[0m
+  [4;35;1mSQL (0.000602)[0m   [0mBEGIN[0m
+  [4;36;1mCampaign Create (0.064593)[0m   [0;1mINSERT INTO `campaigns` (`event_feed_url`, `updated_at`, `s3_bucket`, `pop_pw`, `s3_key`, `pop_user`, `host`, `pop_port`, `created_at`, `pop_server`, `s3_user`) VALUES(NULL, '2008-03-26 23:55:03', NULL, NULL, NULL, NULL, 'greenchange.local_phoneinreport.org', NULL, '2008-03-26 23:55:03', NULL, NULL)[0m
+  [4;35;1mSQL (0.002835)[0m   [0mCOMMIT[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:04:40) [GET]
+  Session ID: 7bbaa149bda327efd2c8c42cf8d2f68f
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000682)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCampaign Columns (0.008973)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.003988)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.10217 (9 reqs/sec) | Rendering: 0.04701 (46%) | DB: 0.01364 (13%) | 200 OK [http://greenchange.local_phoneinreport.org/admin/login]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:04:54) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzI4MWYxMDliZDRiOGY0YzJiN2E1N2QxOGRjMDBl%0ANTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--e5ccbf128793a0f4a30acd3dbce420c7fc1fe3e2
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.075235)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004840)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.026927)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.003228)[0m   [0;1mSHOW TABLES[0m
+
+
+NoMethodError (undefined method `find_by_login' for #<Class:0x330372c>):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/base.rb:1483:in `method_missing'
+    /app/models/user.rb:18:in `authenticate'
+    /app/controllers/admin_controller.rb:10:in `login'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:06:27) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNzI4MWYxMDliZDRiOGY0YzJiN2E1N2QxOGRjMDBl%0ANTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--e5ccbf128793a0f4a30acd3dbce420c7fc1fe3e2
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.007752)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004030)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.006326)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002880)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.08706 (11 reqs/sec) | Rendering: 0.00608 (6%) | DB: 0.13122 (150%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:06:33) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.006956)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.008931)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.016615)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.004438)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.14736 (6 reqs/sec) | Rendering: 0.00640 (4%) | DB: 0.03694 (25%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-03-27 00:08:04) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.006988)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004853)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.005759)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.002529)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://greenchange.local_phoneinreport.org:4000/admin/signup
+Completed in 0.07743 (12 reqs/sec) | DB: 0.02013 (25%) | 302 Found [http://greenchange.local_phoneinreport.org/admin/]
+
+
+Processing AdminController#signup (for 127.0.0.1 at 2008-03-27 00:08:04) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"signup", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.008563)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.003571)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/signup
+Completed in 0.07117 (14 reqs/sec) | Rendering: 0.03387 (47%) | DB: 0.01213 (17%) | 200 OK [http://greenchange.local_phoneinreport.org/admin/signup]
+
+
+Processing AdminController#signup (for 127.0.0.1 at 2008-03-27 00:09:08) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"signup", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.006680)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.006189)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/signup
+Completed in 0.06054 (16 reqs/sec) | Rendering: 0.01051 (17%) | DB: 0.01287 (21%) | 200 OK [http://greenchange.local_phoneinreport.org/admin/signup]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-03-27 00:09:14) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.009891)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.003908)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.007578)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.002314)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://greenchange.local_phoneinreport.org:4000/
+Completed in 0.36963 (2 reqs/sec) | DB: 0.02369 (6%) | 302 Found [http://greenchange.local_phoneinreport.org/admin]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-03-27 00:09:20) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.009010)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004678)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.007300)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001769)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://greenchange.local_phoneinreport.org:4000/
+Completed in 0.08108 (12 reqs/sec) | DB: 0.02276 (28%) | 302 Found [http://greenchange.local_phoneinreport.org/admin]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:09:26) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.008703)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004155)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.05266 (18 reqs/sec) | Rendering: 0.00638 (12%) | DB: 0.01286 (24%) | 200 OK [http://greenchange.local_phoneinreport.org/admin/login]
+
+
+Processing AdminController#index (for 127.0.0.1 at 2008-03-27 00:09:47) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"index", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.019304)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005882)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.007169)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.001586)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+Redirected to http://greenchange.local_phoneinreport.org:4000/
+Completed in 0.08174 (12 reqs/sec) | DB: 0.03394 (41%) | 302 Found [http://greenchange.local_phoneinreport.org/admin]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:11:40) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.016294)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005491)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.05688 (17 reqs/sec) | Rendering: 0.01118 (19%) | DB: 0.02178 (38%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:11:50) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.008629)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005065)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.005558)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.003991)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.09305 (10 reqs/sec) | Rendering: 0.00635 (6%) | DB: 0.02324 (24%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:11:53) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.007106)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005318)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.005408)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.004146)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.10208 (9 reqs/sec) | Rendering: 0.00647 (6%) | DB: 0.02198 (21%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:11:55) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.045182)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004863)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.006039)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.003971)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.12992 (7 reqs/sec) | Rendering: 0.00638 (4%) | DB: 0.06006 (46%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:14:14) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.007232)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005754)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.006485)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002657)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.09788 (10 reqs/sec) | Rendering: 0.00977 (9%) | DB: 0.02213 (22%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:14:18) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.006526)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004907)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.006638)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.010354)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.09335 (10 reqs/sec) | Rendering: 0.00700 (7%) | DB: 0.02842 (30%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:17:24) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.006985)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.013580)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.05138 (19 reqs/sec) | Rendering: 0.00708 (13%) | DB: 0.02057 (40%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:17:30) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org", "remember_me"=>"1"}
+  [4;35;1mCampaign Columns (0.007592)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004359)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.007013)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002744)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.33643 (2 reqs/sec) | Rendering: 0.00631 (1%) | DB: 0.02171 (6%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:17:39) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.006999)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004909)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.017796)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002682)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.17131 (5 reqs/sec) | Rendering: 0.00640 (3%) | DB: 0.03239 (18%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:21:59) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "login"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.006951)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005725)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.014717)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.003992)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.09681 (10 reqs/sec) | Rendering: 0.00664 (6%) | DB: 0.03139 (32%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:22:51) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.007455)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.003908)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.05833 (17 reqs/sec) | Rendering: 0.02128 (36%) | DB: 0.01136 (19%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:23:01) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "email"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.008912)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005260)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.007370)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002908)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.17396 (5 reqs/sec) | Rendering: 0.01709 (9%) | DB: 0.02445 (14%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:23:59) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "remember_me"=>"1", "email"=>"patrice@radicaldesigns.org"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000720)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCampaign Columns (0.011336)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.017710)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.006676)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002912)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.005678)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (0.006874)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.014425)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.000608)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.002566)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(users.email) = 'patrice@radicaldesign.org') LIMIT 1[0m
+  [4;35;1mUser Create (0.005855)[0m   [0mINSERT INTO `users` (`salt`, `crypted_password`, `campaign_id`, `remember_token_expires_at`, `remember_token`, `email`) VALUES('3743b0e0f42f235fe278c2648e59c3cd2683f9cb', '15836596641a7ee329b3b3dad97d5878d866a255', NULL, NULL, NULL, 'patrice@radicaldesign.org')[0m
+  [4;36;1mSQL (0.002950)[0m   [0;1mCOMMIT[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:27:21) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000703)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCampaign Columns (0.013782)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004257)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.27645 (3 reqs/sec) | Rendering: 0.01166 (4%) | DB: 0.01874 (6%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:27:34) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "remember_me"=>"1", "email"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.006510)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005380)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.006234)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002844)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.08542 (11 reqs/sec) | Rendering: 0.00595 (6%) | DB: 0.02097 (24%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+  [4;35;1mUser Load (0.002516)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+  [4;36;1mUser Load (0.002464)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mSQL (0.000612)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.098814)[0m   [0;1mSELECT * FROM `users` WHERE (LOWER(users.email) = 'patrice@radicaldesigns.org' AND users.id <> 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.027220)[0m   [0mUPDATE `users` SET `crypted_password` = '15836596641a7ee329b3b3dad97d5878d866a255', `remember_token_expires_at` = NULL, `salt` = '3743b0e0f42f235fe278c2648e59c3cd2683f9cb', `campaign_id` = NULL, `remember_token` = NULL, `email` = 'patrice@radicaldesigns.org' WHERE `id` = 1[0m
+  [4;36;1mSQL (0.002700)[0m   [0;1mCOMMIT[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:28:28) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "email"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.009772)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005617)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.006886)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002706)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:28:52) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000650)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCampaign Columns (0.011261)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.009352)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.29058 (3 reqs/sec) | Rendering: 0.01521 (5%) | DB: 0.02126 (7%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:28:58) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "email"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.006590)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005512)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.007333)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002731)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:29:26) [GET]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000672)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCampaign Columns (0.006547)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005343)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.27621 (3 reqs/sec) | Rendering: 0.01181 (4%) | DB: 0.01256 (4%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:29:33) [POST]
+  Session ID: BAh7CDoJdXNlcjA6DGNzcmZfaWQiJTcyODFmMTA5YmQ0YjhmNGMyYjdhNTdk%0AMThkYzAwZTUxIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6%0ARmxhc2hIYXNoewAGOgpAdXNlZHsA--cd8341d2922864b957127d502c041e18a47b0457
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "email"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.018450)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.008457)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.005612)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.004056)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Redirected to http://greenchange.local_phoneinreport.org:4000/admin/operator
+Completed in 0.11569 (8 reqs/sec) | DB: 0.03657 (31%) | 302 Found [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#operator (for 127.0.0.1 at 2008-03-27 00:29:33) [GET]
+  Session ID: BAh7CToJdXNlcmkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU3MjgxZjEwOWJk%0ANGI4ZjRjMmI3YTU3ZDE4ZGMwMGU1MSIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBz%0AdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--4eb0f821c19067d81e241a64ec754bc273ba27ac
+  Parameters: {"action"=>"operator", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.008933)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.003384)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.006893)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.005241)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+
+NoMethodError (undefined method `admin?' for #<User:0x3407c54>):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/attribute_methods.rb:200:in `method_missing'
+    /app/controllers/admin_controller.rb:40:in `authorized?'
+    /lib/authenticated_system.rb:53:in `login_required'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:469:in `send!'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:469:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:441:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:716:in `run_before_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:695:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000789)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000836)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.001739)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.001196)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.001253)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.001094)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.001375)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateUserRoles (5)
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'roles': DROP TABLE `roles`[0m
+  [4;35;1mSQL (0.138732)[0m   [0mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S02Unknown table 'roles_users': DROP TABLE `roles_users`[0m
+  [4;35;1mSQL (0.101536)[0m   [0mCREATE TABLE `roles_users` (`role_id` int(11) DEFAULT NULL, `user_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.290709)[0m   [0;1mCREATE INDEX `unique_index_on_role_id_and_user_id` ON `roles_users` (`role_id`, `user_id`)[0m
+  [4;35;1mSQL (0.001201)[0m   [0mUPDATE schema_info SET version = 5[0m
+  [4;36;1mSQL (0.001567)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.002256)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.007319)[0m   [0;1mSHOW FIELDS FROM `campaigns`[0m
+  [4;35;1mSQL (0.008044)[0m   [0mdescribe `campaigns`[0m
+  [4;36;1mSQL (0.124065)[0m   [0;1mSHOW KEYS FROM `campaigns`[0m
+  [4;35;1mSQL (0.008337)[0m   [0mSHOW FIELDS FROM `reports`[0m
+  [4;36;1mSQL (0.009452)[0m   [0;1mdescribe `reports`[0m
+  [4;35;1mSQL (0.005772)[0m   [0mSHOW KEYS FROM `reports`[0m
+  [4;36;1mSQL (0.004942)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.005074)[0m   [0mdescribe `roles`[0m
+  [4;36;1mSQL (0.004561)[0m   [0;1mSHOW KEYS FROM `roles`[0m
+  [4;35;1mSQL (0.005229)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mSQL (0.005040)[0m   [0;1mdescribe `roles_users`[0m
+  [4;35;1mSQL (0.005115)[0m   [0mSHOW KEYS FROM `roles_users`[0m
+  [4;36;1mSQL (0.005851)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.006642)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.005182)[0m   [0;1mSHOW KEYS FROM `users`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000593)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mRole Columns (0.004789)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mSQL (0.000609)[0m   [0;1mBEGIN[0m
+  [4;35;1mRole Create (0.001592)[0m   [0mINSERT INTO `roles` (`title`) VALUES('admin')[0m
+  [4;36;1mSQL (0.052207)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000593)[0m   [0mBEGIN[0m
+  [4;36;1mRole Create (0.001348)[0m   [0;1mINSERT INTO `roles` (`title`) VALUES('developer')[0m
+  [4;35;1mSQL (0.001489)[0m   [0mCOMMIT[0m
+  [4;36;1mUser Load (0.002354)[0m   [0;1mSELECT * FROM `users` LIMIT 1[0m
+  [4;35;1mUser Columns (0.006021)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.002580)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000944)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Load (0.002565)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mUser Columns (0.006705)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mRole Load (0.000000)[0m   [0mMysql::Error: #42S22Unknown column 'roles.user_id' in 'where clause': SELECT * FROM `roles` WHERE (roles.user_id = 1) [0m
+  [4;36;1mRole Columns (0.005707)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S22Unknown column 'roles.user_id' in 'where clause': SELECT count(*) AS count_all FROM `roles` WHERE (roles.user_id = 1) [0m
+  [4;36;1mUser Columns (0.005202)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.002408)[0m   [0mSELECT * FROM `users` LIMIT 1[0m
+  [4;36;1mUser Columns (0.005515)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mJoin Table Columns (0.005001)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.002027)[0m   [0;1mSELECT * FROM `roles` INNER JOIN roles_users ON roles.id = roles_users.role_id WHERE (roles_users.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.006589)[0m   [0mSHOW FIELDS FROM `roles`[0m
+  [4;36;1mRole Load (0.003374)[0m   [0;1mSELECT * FROM `roles` WHERE (`roles`.`title` = 'admin') LIMIT 1[0m
+  [4;35;1mSQL (0.000782)[0m   [0mBEGIN[0m
+  [4;36;1mroles_users Columns (0.004214)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mSQL (0.003077)[0m   [0mINSERT INTO roles_users (`role_id`, `user_id`) VALUES (1, 1)[0m
+  [4;36;1mSQL (0.001668)[0m   [0;1mCOMMIT[0m
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:45:21) [GET]
+  Session ID: BAh7CToJdXNlcmkGOgxjc3JmX2lkIiU3MjgxZjEwOWJkNGI4ZjRjMmI3YTU3%0AZDE4ZGMwMGU1MToOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--e44e49810ab714ff2ec77a6eba509099870f4ec7
+  Parameters: {"action"=>"login", "controller"=>"admin"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000658)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCampaign Columns (0.019308)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.003818)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+Rendering admin/login
+Completed in 0.27233 (3 reqs/sec) | Rendering: 0.01327 (4%) | DB: 0.02378 (8%) | 200 OK [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#login (for 127.0.0.1 at 2008-03-27 00:45:27) [POST]
+  Session ID: BAh7CToJdXNlcmkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU3MjgxZjEwOWJk%0ANGI4ZjRjMmI3YTU3ZDE4ZGMwMGU1MSIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--76e558a2d78c42518ee6831aa58a4cda8eaf39d0
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"005f41bc69bca72f062abeaa0e66e848fe1dd56b", "action"=>"login", "controller"=>"admin", "password"=>"route#66", "email"=>"patrice@radicaldesigns.org"}
+  [4;35;1mCampaign Columns (0.012573)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.007574)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.005298)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.004475)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'patrice@radicaldesigns.org') LIMIT 1[0m
+Redirected to http://greenchange.local_phoneinreport.org:4000/admin/operator
+Completed in 0.17684 (5 reqs/sec) | DB: 0.02992 (16%) | 302 Found [http://greenchange.local_phoneinreport.org/]
+
+
+Processing AdminController#operator (for 127.0.0.1 at 2008-03-27 00:45:28) [GET]
+  Session ID: BAh7CToJdXNlcmkGOgxjc3JmX2lkIiU3MjgxZjEwOWJkNGI4ZjRjMmI3YTU3%0AZDE4ZGMwMGU1MToOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBz%0AdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--9a64466b6774895b01a3fc346ad79891e36e950d
+  Parameters: {"action"=>"operator", "controller"=>"admin"}
+  [4;35;1mCampaign Columns (0.006902)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.005384)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.005516)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.004254)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mJoin Table Columns (0.005172)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.003244)[0m   [0;1mSELECT * FROM `roles` INNER JOIN roles_users ON roles.id = roles_users.role_id WHERE (roles_users.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.004344)[0m   [0mSHOW FIELDS FROM `roles`[0m
+
+
+ActionController::UnknownAction (No action responded to operator):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing OperatorController#index (for 127.0.0.1 at 2008-03-27 00:48:13) [GET]
+  Session ID: BAh7CToJdXNlcmkGOg5yZXR1cm5fdG8wOgxjc3JmX2lkIiU3MjgxZjEwOWJk%0ANGI4ZjRjMmI3YTU3ZDE4ZGMwMGU1MSIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--76e558a2d78c42518ee6831aa58a4cda8eaf39d0
+  Parameters: {"action"=>"index", "controller"=>"admin/operator"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000734)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mCampaign Columns (0.008217)[0m   [0mSHOW FIELDS FROM `campaigns`[0m
+  [4;36;1mCampaign Load (0.004138)[0m   [0;1mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;35;1mUser Columns (0.018017)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.003080)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mJoin Table Columns (0.006405)[0m   [0mSHOW FIELDS FROM `roles_users`[0m
+  [4;36;1mRole Load (0.002205)[0m   [0;1mSELECT * FROM `roles` INNER JOIN roles_users ON roles.id = roles_users.role_id WHERE (roles_users.user_id = 1 ) [0m
+  [4;35;1mRole Columns (0.005053)[0m   [0mSHOW FIELDS FROM `roles`[0m
+
+
+NoMethodError (undefined method `published_reports' for #<Campaign:0x3551e5c>):
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/attribute_methods.rb:205:in `method_missing'
+    /app/controllers/admin/operator_controller.rb:3:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing OperatorController#index (for 127.0.0.1 at 2008-03-27 00:48:47) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvMDoJdXNlcmkGOgxjc3JmX2lkIiU3MjgxZjEwOWJk%0ANGI4ZjRjMmI3YTU3ZDE4ZGMwMGU1MSIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--e4dec77fdf5d99723b6444df41ffb8a39d5ccb93
+  Parameters: {"action"=>"index", "controller"=>"admin/operator"}
+  [4;36;1mCampaign Columns (0.019559)[0m   [0;1mSHOW FIELDS FROM `campaigns`[0m
+  [4;35;1mCampaign Load (0.003904)[0m   [0mSELECT * FROM `campaigns` WHERE (`campaigns`.`host` = 'greenchange.local_phoneinreport.org') LIMIT 1[0m
+  [4;36;1mUser Columns (0.007556)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.003037)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mJoin Table Columns (0.004504)[0m   [0;1mSHOW FIELDS FROM `roles_users`[0m
+  [4;35;1mRole Load (0.013391)[0m   [0mSELECT * FROM `roles` INNER JOIN roles_users ON roles.id = roles_users.role_id WHERE (roles_users.user_id = 1 ) [0m
+  [4;36;1mRole Columns (0.005132)[0m   [0;1mSHOW FIELDS FROM `roles`[0m
+
+
+ActionController::MissingTemplate (Missing template admin/operator/index.html.erb in view path /Users/patricedemuizon/Development/RadicalDesigns/phoneinreport/app/views):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1269:in `assert_existence_of_template_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1098:in `render_for_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:270:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:159:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:158:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:285:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel.rb:268:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:282:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/configurator.rb:281:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/command.rb:212:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /usr/local/bin/mongrel_rails:19:in `load'
+    /usr/local/bin/mongrel_rails:19
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)

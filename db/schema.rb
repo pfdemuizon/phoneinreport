@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "event_feed_url"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 4) do
     t.string   "s3_user"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "host"
   end
 
   create_table "reports", :force => true do |t|
@@ -46,13 +47,21 @@ ActiveRecord::Schema.define(:version => 4) do
     t.datetime "updated_at"
   end
 
+  create_table "roles", :force => true do |t|
+    t.string "title"
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
+
+  add_index "roles_users", ["role_id", "user_id"], :name => "unique_index_on_role_id_and_user_id"
+
   create_table "users", :force => true do |t|
-    t.string   "login"
     t.string   "email"
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
     t.integer  "campaign_id"
