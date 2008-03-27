@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "event_feed_url"
@@ -65,6 +65,14 @@ ActiveRecord::Schema.define(:version => 5) do
     t.string   "remember_token"
     t.datetime "remember_token_expires_at"
     t.integer  "campaign_id"
+  end
+
+  create_table "voice_mails", :force => true do |t|
+    t.integer  "size"
+    t.string   "content_type"
+    t.string   "filename"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
