@@ -2,7 +2,7 @@ module Technoweenie # :nodoc:
   module AttachmentFu # :nodoc:
     @@default_processors = %w(ImageScience Rmagick MiniMagick Gd2 CoreImage)
     @@tempfile_path      = File.join(RAILS_ROOT, 'tmp', 'attachment_fu')
-    @@content_types      = ['image/jpeg', 'image/pjpeg', 'image/gif', 'image/png', 'image/x-png', 'image/jpg']
+    @@content_types      = ['image/jpeg', 'image/pjpeg', 'image/gif', 'image/png', 'image/x-png', 'image/jpg', 'audio/wav', 'audio/mp3']
     mattr_reader :content_types, :tempfile_path, :default_processors
     mattr_writer :tempfile_path
 
@@ -129,6 +129,11 @@ module Technoweenie # :nodoc:
       # Returns true or false if the given content type is recognized as an image.
       def image?(content_type)
         content_types.include?(content_type)
+      end
+
+      # Returns true or false if the given content type is recognized as audio.
+      def audio?(content_type)
+        "audio/wav" == content_type
       end
 
       def self.extended(base)
@@ -356,6 +361,11 @@ module Technoweenie # :nodoc:
         self.class.with_image(temp_path, &block)
       end
 
+      # Same as above except for audio
+      def with_audio(&block)
+        self.class.with_audio(temp_path, &block)
+      end
+
       protected
         # Generates a unique filename for a Tempfile.
         def random_tempfile_filename
@@ -400,6 +410,7 @@ module Technoweenie # :nodoc:
 
         # Cleans up after processing.  Thumbnails are created, the attachment is stored to the backend, and the temp_paths are cleared.
         def after_process_attachment
+          debugger
           if @saved_attachment
             if respond_to?(:process_attachment_with_processing) && thumbnailable? && !attachment_options[:thumbnails].blank? && parent_id.nil?
               temp_file = temp_path || create_temp_file

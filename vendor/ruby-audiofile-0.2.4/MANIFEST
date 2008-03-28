@@ -1,0 +1,8 @@
+MANIFEST
+audiofile.c
+audiofile.rd
+audiofile.html
+depend
+extconf.rb
+fail.rb
+test.rb

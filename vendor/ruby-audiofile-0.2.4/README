@@ -1,0 +1,11 @@
+to install, run these commands:
+
+ruby extconf.rb
+make
+su
+make install 
+
+the audiofile library and headers are required. 
+
+enjoy!
+-jared

@@ -78,6 +78,7 @@ module Technoweenie # :nodoc:
           
           # Saves the file to the file system
           def save_to_storage
+            debugger
             if save_attachment?
               # TODO: This overwrites the file if it exists, maybe have an allow_overwrite option?
               FileUtils.mkdir_p(File.dirname(full_filename))

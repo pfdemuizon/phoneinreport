@@ -107,3 +107,345 @@ Received mail:
   [4;36;1mSQL (0.000897)[0m   [0;1mROLLBACK[0m
   [4;35;1mSQL (0.000714)[0m   [0mBEGIN[0m
   [4;36;1mSQL (0.000767)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000724)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.003430)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.000000)[0m   [0;1mMysql::Error: #42S02Table 'phoneinreport_test.voice_mails' doesn't exist: SHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000939)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001305)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000558)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.000000)[0m   [0;1mMysql::Error: #42S02Table 'phoneinreport_test.voice_mails' doesn't exist: SHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002362)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001039)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000502)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.015099)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.004396)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001001)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000847)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009671)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002572)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000710)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001186)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.007165)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002078)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000914)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000981)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010400)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002653)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.009769)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000588)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010791)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002433)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000715)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.002612)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.013992)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.003009)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.007399)[0m   [0;1mSHOW TABLES[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001867)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000934)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.021995)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.003410)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000801)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000909)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.012877)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001034)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001528)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000641)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.019001)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000600)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000858)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001134)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009582)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001466)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001449)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000616)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010462)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000844)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000624)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000947)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.011456)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.003352)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000606)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.019098)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.142110)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000633)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000476)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010396)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002947)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000737)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000583)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009962)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000615)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000513)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.006115)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000711)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000574)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.011056)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.007281)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000729)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000583)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.011114)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000711)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000587)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.013198)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000675)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000465)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.196391)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.041445)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000703)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000741)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.030987)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002236)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000772)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001290)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.012749)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001209)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001043)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.011289)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001543)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.002136)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001030)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.013209)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.003615)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001161)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.011759)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000998)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000964)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000945)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.007340)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001102)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000844)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001173)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.020340)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.005802)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000749)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000484)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010448)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.052032)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000585)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000917)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.015539)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.003236)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001614)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001290)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009399)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000756)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.010474)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.003407)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.017731)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002347)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001813)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000546)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.012407)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.003259)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001439)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.002167)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009364)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000803)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001985)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000535)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.011675)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.002289)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001128)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000527)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009335)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001187)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.005133)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001011)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.013819)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000844)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000504)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.021296)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001367)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000821)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000658)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010591)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001350)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001777)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.008426)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001256)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001173)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.016825)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.004965)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000711)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.014817)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001026)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001131)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001620)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.021530)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000824)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000540)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.014856)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000979)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000970)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000798)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.080644)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001235)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001410)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000706)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.012174)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mUser Columns (0.030683)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.089634)[0m   [0;1mSELECT count(*) AS count_all FROM `users` [0m
+  [4;35;1mSQL (0.007271)[0m   [0mSELECT count(*) AS count_all FROM `voice_mails` [0m
+  [4;36;1mCampaign Columns (0.019984)[0m   [0;1mSHOW FIELDS FROM `campaigns`[0m
+  [4;35;1mSQL (0.011124)[0m   [0mSELECT count(*) AS count_all FROM `campaigns` [0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.004249)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001029)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010797)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000776)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000899)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.017505)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000696)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001017)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.012762)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001583)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000813)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009677)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000716)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000930)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010821)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001626)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000640)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000527)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.022702)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000598)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000633)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000485)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.022301)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001186)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001115)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001324)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009579)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000707)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001061)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000498)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.009089)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000598)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000804)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000510)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.007369)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001022)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001408)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001023)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010656)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001707)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.003209)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000590)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.013814)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.002432)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000652)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.012125)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001248)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001199)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000562)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.011743)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.004602)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000747)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000500)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.014571)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000998)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000577)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.055871)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001123)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000680)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001022)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.015954)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.006239)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000701)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000538)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.011376)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001142)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000627)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000502)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010909)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.002362)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000605)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.008089)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000739)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001925)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.014151)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mVoiceMail Create (0.077544)[0m   [0mINSERT INTO `voice_mails` (`content_type`, `size`, `updated_at`, `type`, `report_id`, `filename`, `created_at`, `max_email_ref_num`) VALUES('audio/wav', 45100, '2008-03-28 13:24:54', NULL, NULL, 'voice_mail_test.wav', '2008-03-28 13:24:54', NULL)[0m
+  [4;36;1mSQL (0.158566)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001167)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000513)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.012571)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.001171)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000776)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000947)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.017040)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mSQL (0.000827)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001385)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000562)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.016554)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mVoiceMail Create (0.002145)[0m   [0mINSERT INTO `voice_mails` (`content_type`, `size`, `updated_at`, `type`, `report_id`, `filename`, `created_at`, `max_email_ref_num`) VALUES('audio/mp3', 45100, '2008-03-28 13:35:04', NULL, NULL, 'voice_mail_test.mp3', '2008-03-28 13:35:04', NULL)[0m
+  [4;36;1mSQL (0.007066)[0m   [0;1mROLLBACK[0m
