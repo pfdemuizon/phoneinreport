@@ -1,0 +1,109 @@
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001608)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000694)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000752)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000693)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000749)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000673)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000771)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000715)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000585)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000982)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000768)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000596)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000720)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000740)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000554)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000729)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000733)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000746)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001210)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000691)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000793)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000795)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000790)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001083)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000797)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000781)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000746)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000757)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000649)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.031091)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.000862)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000720)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000734)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000538)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000617)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.000707)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000808)[0m   [0mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000772)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000505)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.131125)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000722)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000604)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000618)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000717)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.001624)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001759)[0m   [0mSHOW TABLES[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001077)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000692)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000853)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000590)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000885)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000765)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000633)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000742)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000804)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.002102)[0m   [0mSHOW TABLES[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000907)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000684)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000808)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000743)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000798)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000742)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000839)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000727)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000912)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000785)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000703)[0m   [0mBEGIN[0m
+Received mail:
+ 
+  [4;36;1mSQL (0.000897)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000626)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000803)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000587)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000634)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000773)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000634)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000669)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000645)[0m   [0mBEGIN[0m
+Received mail:
+ 
+  [4;36;1mSQL (0.000829)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000793)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.014566)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000569)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000795)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000571)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000834)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000909)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000516)[0m   [0mBEGIN[0m
+Received mail:
+ 
+  [4;36;1mSQL (0.000800)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.001725)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000821)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000611)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000897)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.000714)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000767)[0m   [0;1mROLLBACK[0m

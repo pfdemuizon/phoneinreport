@@ -1,0 +1,72 @@
+parse.o parse.o: parse.c ../config.h /usr/include/gcc/darwin/3.3/assert.h \
+  /usr/include/ctype.h /usr/include/runetype.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/ansi.h /usr/include/ppc/ansi.h \
+  /usr/include/stdlib.h /usr/include/machine/types.h \
+  /usr/include/ppc/types.h /usr/include/alloca.h /usr/include/string.h \
+  /usr/include/limits.h /usr/include/gcc/darwin/3.3/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/sys/syslimits.h \
+  ../include/lame.h /usr/include/stdio.h /usr/include/sys/types.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/endian.h \
+  /usr/include/ppc/endian.h /usr/include/gcc/darwin/3.3/stdarg.h \
+  ../libmp3lame/set_get.h brhist.h parse.h main.h get_audio.h \
+  portableio.h ../libmp3lame/version.h
+
+../config.h:
+
+/usr/include/gcc/darwin/3.3/assert.h:
+
+/usr/include/ctype.h:
+
+/usr/include/runetype.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/ansi.h:
+
+/usr/include/ppc/ansi.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/alloca.h:
+
+/usr/include/string.h:
+
+/usr/include/limits.h:
+
+/usr/include/gcc/darwin/3.3/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/sys/syslimits.h:
+
+../include/lame.h:
+
+/usr/include/stdio.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/gcc/darwin/3.3/stdarg.h:
+
+../libmp3lame/set_get.h:
+
+brhist.h:
+
+parse.h:
+
+main.h:
+
+get_audio.h:
+
+portableio.h:
+
+../libmp3lame/version.h:

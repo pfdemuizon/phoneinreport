@@ -1,0 +1,102 @@
+decode_i386.lo decode_i386.o: decode_i386.c ../config.h \
+  /usr/include/stdlib.h /usr/include/machine/ansi.h \
+  /usr/include/ppc/ansi.h /usr/include/machine/types.h \
+  /usr/include/ppc/types.h /usr/include/sys/cdefs.h /usr/include/alloca.h \
+  /usr/include/string.h /usr/include/math.h \
+  /usr/include/architecture/ppc/math.h decode_i386.h common.h mpg123.h \
+  /usr/include/stdio.h /usr/include/sys/types.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/endian.h \
+  /usr/include/ppc/endian.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/machine/signal.h \
+  /usr/include/ppc/signal.h mpglib.h ../libmp3lame/lame-analysis.h \
+  ../libmp3lame/encoder.h ../libmp3lame/machine.h /usr/include/ctype.h \
+  /usr/include/runetype.h /usr/include/errno.h /usr/include/sys/errno.h \
+  /usr/include/fcntl.h /usr/include/sys/fcntl.h /usr/include/sys/stat.h \
+  /usr/include/sys/time.h /usr/include/time.h \
+  /usr/include/gcc/darwin/3.3/machine/limits.h /usr/include/ppc/limits.h \
+  ../include/lame.h /usr/include/gcc/darwin/3.3/stdarg.h dct64_i386.h \
+  tabinit.h
+
+../config.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/machine/ansi.h:
+
+/usr/include/ppc/ansi.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/alloca.h:
+
+/usr/include/string.h:
+
+/usr/include/math.h:
+
+/usr/include/architecture/ppc/math.h:
+
+decode_i386.h:
+
+common.h:
+
+mpg123.h:
+
+/usr/include/stdio.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+mpglib.h:
+
+../libmp3lame/lame-analysis.h:
+
+../libmp3lame/encoder.h:
+
+../libmp3lame/machine.h:
+
+/usr/include/ctype.h:
+
+/usr/include/runetype.h:
+
+/usr/include/errno.h:
+
+/usr/include/sys/errno.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/sys/fcntl.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/time.h:
+
+/usr/include/gcc/darwin/3.3/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+../include/lame.h:
+
+/usr/include/gcc/darwin/3.3/stdarg.h:
+
+dct64_i386.h:
+
+tabinit.h:

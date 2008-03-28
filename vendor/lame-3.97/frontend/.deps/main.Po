@@ -1,0 +1,70 @@
+main.o main.o: main.c ../config.h /usr/include/gcc/darwin/3.3/assert.h \
+  /usr/include/stdio.h /usr/include/sys/types.h \
+  /usr/include/sys/appleapiopts.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/types.h /usr/include/ppc/types.h \
+  /usr/include/machine/ansi.h /usr/include/ppc/ansi.h \
+  /usr/include/machine/endian.h /usr/include/ppc/endian.h \
+  /usr/include/stdlib.h /usr/include/alloca.h /usr/include/string.h \
+  /usr/include/fcntl.h /usr/include/sys/fcntl.h ../include/lame.h \
+  /usr/include/gcc/darwin/3.3/stdarg.h brhist.h parse.h main.h \
+  /usr/include/limits.h /usr/include/gcc/darwin/3.3/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/sys/syslimits.h get_audio.h \
+  portableio.h timestatus.h
+
+../config.h:
+
+/usr/include/gcc/darwin/3.3/assert.h:
+
+/usr/include/stdio.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/machine/ansi.h:
+
+/usr/include/ppc/ansi.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/alloca.h:
+
+/usr/include/string.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/sys/fcntl.h:
+
+../include/lame.h:
+
+/usr/include/gcc/darwin/3.3/stdarg.h:
+
+brhist.h:
+
+parse.h:
+
+main.h:
+
+/usr/include/limits.h:
+
+/usr/include/gcc/darwin/3.3/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/sys/syslimits.h:
+
+get_audio.h:
+
+portableio.h:
+
+timestatus.h:

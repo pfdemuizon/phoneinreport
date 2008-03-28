@@ -1,0 +1,102 @@
+<div id="wrapper">
+<h1>Embedded MP3 Audio Player</h1>
+<p>This tutorial uses the <a href="http://www.1pixelout.net/code/audio-player-wordpress-plugin/" target="_blank">Audio
+Player Wordpress plugin</a> from <a href="http://www.1pixelout.net/" target="_blank">1pixelout</a>. Please download the .zip file from
+that site. You will need to unzip the files and use two of them:</p>
+<ul>
+  <li>player.swf (this is the audio player) </li>
+  <li>audio-player.js (this is the JavaScript) </li>
+
+</ul>
+<p>These instructions concern using that player on non-Wordpress HTML pages.</p>
+<p>You must have some Web space that you control (that is, server space) to which
+  you will <b>upload</b> these files as well as your audio files.</p>
+
+<script language="JavaScript" src="/javascripts/audio-player.js"></script>
+
+<object type="application/x-shockwave-flash" data="player.swf" id="audioplayer1" height="24" width="290">
+<param name="movie" value="player.swf">
+<param name="FlashVars" value="playerID=1&amp;soundFile=/voice_mails/0000/0001/aj042x4p.mp3">
+<param name="quality" value="high">
+
+<param name="menu" value="false">
+<param name="wmode" value="transparent">
+</object>
+<p>If you are using Internet Explorer, you will probably need to click the player
+  twice to make it play. (All other Web browsers will let you click once.) If
+  you do not see the MP3 player, then you don't have the <a href="http://www.adobe.com/go/getflashplayer/" target="_blank">Flash
+  player</a> installed. (More than 90 percent of all Internet users <a href="http://www.adobe.com/products/player_census/flashplayer/version_penetration.html" target="_blank">do
+  have it</a>.) </p>
+<h2>Tutorial</h2>
+<p>For this tutorial, let's imagine that your server space is at this URL:
+  <b>www.fakedomain.com/myname/</b></p>
+<ol>
+  <li>Create a new folder on your Web server and name it "audio"</li>
+
+  <li>Upload the two files for the audio player (<b>player.swf</b> and <b>audio-player.js</b>)
+    to the <b>audio</b> folder.</li>
+  <li>Upload an MP3 file to the <b>audio</b> folder. For this tutorial, let's
+    assume your file is named <b>music.mp3</b>. (NOTE: The MP3 file must be encoded
+    at 44.1 kHz, or 22.05 kHz, or 11.025 kHZ; any other sampling rate will result
+    in the "chipmunk effect," which you really would not like.) </li>
+
+</ol>
+<p>Now that your three files are uploaded, they reside at these URLs:  </p>
+<ul>
+  <li>http://www.fakedomain.com/myname/audio/<b>player.swf</b></li>
+  <li>http://www.fakedomain.com/myname/audio/<b>audio-player.js</b></li>
+  <li>http://www.fakedomain.com/myname/audio/<b>music.mp3</b></li>
+</ul>
+
+<p>The next step is to place the HTML for this player on the Web page where you
+  want it to appear. Change the URLs shown below to match your own URLs.</p>
+<div class="markup">&lt;script language="JavaScript" src="<span class="highlight">http://www.fakedomain.com/myname/audio/audio-player.js</span>"&gt;&lt;/script&gt;<br>
+&lt;object type="application/x-shockwave-flash" data="<span class="highlight">http://www.fakedomain.com/myname/audio/player.swf</span>" id="audioplayer1" height="24" width="290"&gt;<br>
+    &lt;param name="movie" value="<span class="highlight">http://www.fakedomain.com/myname/audio/player.swf</span>"&gt;<br>
+    &lt;param name="FlashVars" value="playerID=1&amp;amp;soundFile=<span class="highlight">http://www.fakedomain.com/myname/audio/music.mp3</span>"&gt;<br>
+
+    &lt;param name="quality" value="high"&gt;<br>
+    &lt;param name="menu" value="false"&gt;<br>
+    &lt;param name="wmode" value="transparent"&gt;<br>
+    &lt;/object&gt;
+</div>
+<h2>If You Use Blogger</h2>
+<p>To use this player with a blog hosted at Blogger, take out all the code <b>above</b>  the
+  &lt;object&gt; tag and place it in your Blogger template (instead). In the Blogger
+  template, place it above the &lt;/head&gt; tag, as shown: </p>
+
+<div class="markup">&lt;script language="JavaScript" src="<span class="highlight">http://www.fakedomain.com/myname/audio/audio-player.js</span>"&gt;&lt;/script&gt;<br>
+  &lt;/head&gt; </div>
+<p>Then each time you use the player<b> in a blog post, </b>you will paste <b>only</b> the
+  &lt;object&gt; code into your blog post. </p>
+
+<h2>Using More Than One Audio File </h2>
+<p>You can simply upload additional audio files to the same "audio" folder on
+  your Web server. Make sure each file has a unique filename.</p>
+<p>You do not need to upload the two  files for the audio player (<b>player.swf</b> and <b>audio-player.js</b>)
+  more than once.</p>
+<h2>Placing More Than One Player on the Same Page  </h2>
+<p>For a second player on a page, use this HTML: </p>
+<div class="markup">&lt;object type="application/x-shockwave-flash" data="http://www.fakedomain.com/myname/audio/player.swf" id="<span class="highlight">audioplayer2</span>" height="24" width="290"&gt;<br>
+
+  &lt;param name="movie" value="http://www.fakedomain.com/myname/audio/player.swf"&gt;<br>
+  &lt;param name="FlashVars" value="<span class="highlight">playerID=2</span>&amp;amp;soundFile=<span class="highlight">http://www.fakedomain.com/myname/audio/other.mp3</span>"&gt;<br>
+  &lt;param name="quality" value="high"&gt;<br>
+  &lt;param name="menu" value="false"&gt;<br>
+  &lt;param name="wmode" value="transparent"&gt;<br>
+
+  &lt;/object&gt; </div>
+<p>For a third player on the same page, change "2" to "3" in the HTML, etc. </p>
+<p>You may also <a href="options.html">customize the colors</a> of the audio player. </p>
+<p>&nbsp;</p>
+<div id="footer">
+<h2>About</h2>
+<p>This tutorial is provided free of charge by <a href="http://mindymcadams.com/">Mindy
+    McAdams</a>. Please visit my
+  blog, <a href="http://mindymcadams.com/tojou/">Teaching Online Journalism</a>.
+  This tutorial  is provided for your use without warranty or support. Copies
+  are permitted only under the conditions of <a href="http://creativecommons.org/licenses/by-nc-nd/2.5/" target="_blank">this
+  Creative Commons license</a>.</p>
+
+</div>
+</div>

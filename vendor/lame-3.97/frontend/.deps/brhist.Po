@@ -1,0 +1,47 @@
+brhist.o brhist.o: brhist.c ../config.h /usr/include/stdlib.h \
+  /usr/include/machine/ansi.h /usr/include/ppc/ansi.h \
+  /usr/include/machine/types.h /usr/include/ppc/types.h \
+  /usr/include/sys/cdefs.h /usr/include/alloca.h /usr/include/string.h \
+  /usr/include/termcap.h /usr/include/ncurses_dll.h \
+  /usr/include/sys/types.h /usr/include/sys/appleapiopts.h \
+  /usr/include/machine/endian.h /usr/include/ppc/endian.h brhist.h \
+  ../include/lame.h /usr/include/stdio.h \
+  /usr/include/gcc/darwin/3.3/stdarg.h
+
+../config.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/machine/ansi.h:
+
+/usr/include/ppc/ansi.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/alloca.h:
+
+/usr/include/string.h:
+
+/usr/include/termcap.h:
+
+/usr/include/ncurses_dll.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+brhist.h:
+
+../include/lame.h:
+
+/usr/include/stdio.h:
+
+/usr/include/gcc/darwin/3.3/stdarg.h:

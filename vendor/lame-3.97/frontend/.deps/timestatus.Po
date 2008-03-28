@@ -1,0 +1,61 @@
+timestatus.o timestatus.o: timestatus.c ../config.h \
+  /usr/include/gcc/darwin/3.3/assert.h /usr/include/time.h \
+  /usr/include/machine/ansi.h /usr/include/ppc/ansi.h \
+  /usr/include/gcc/darwin/3.3/machine/limits.h /usr/include/ppc/limits.h \
+  /usr/include/sys/cdefs.h ../include/lame.h /usr/include/stdio.h \
+  /usr/include/sys/types.h /usr/include/sys/appleapiopts.h \
+  /usr/include/machine/types.h /usr/include/ppc/types.h \
+  /usr/include/machine/endian.h /usr/include/ppc/endian.h \
+  /usr/include/gcc/darwin/3.3/stdarg.h main.h /usr/include/limits.h \
+  /usr/include/sys/syslimits.h get_audio.h portableio.h lametime.h \
+  timestatus.h brhist.h
+
+../config.h:
+
+/usr/include/gcc/darwin/3.3/assert.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/ansi.h:
+
+/usr/include/ppc/ansi.h:
+
+/usr/include/gcc/darwin/3.3/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/sys/cdefs.h:
+
+../include/lame.h:
+
+/usr/include/stdio.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/gcc/darwin/3.3/stdarg.h:
+
+main.h:
+
+/usr/include/limits.h:
+
+/usr/include/sys/syslimits.h:
+
+get_audio.h:
+
+portableio.h:
+
+lametime.h:
+
+timestatus.h:
+
+brhist.h:
