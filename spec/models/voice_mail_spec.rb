@@ -11,7 +11,6 @@ describe VoiceMail do
     attachment.content_type = "audio/wav"
     attachment.string = IO.read(File.join(RAILS_ROOT, 'spec', attachment.original_filename))
     @voice_mail.uploaded_data = attachment
-    debugger
     @voice_mail.save
   end
 end

@@ -17,15 +17,14 @@ module Technoweenie # :nodoc:
           def process_attachment_with_processing
             return unless process_attachment_without_processing
             with_audio do |audio_file|
-              debugger
-              #raise "File doesn't exist: #{wav_file}" if File.exists?(wav_file)
-              wav_file = audio_file.dup
+              wav_file = audio_file.clone
               audio_file.sub! /wav$/, 'mp3'
-              `lame -b 32 --resample 22050 #{wav_file} #{audio_file}`
-              #File.delete(wav_file)
+              RAILS_DEFAULT_LOGGER.info("lame -b 32 --resample 22050 #{wav_file} #{audio_file} 2>&1")
+              RAILS_DEFAULT_LOGGER.info(`lame -b 32 --resample 22050 #{wav_file} #{audio_file} 2>&1`)
+              File.delete(wav_file)
               content_type.sub!(/wav$/, 'mp3')
               filename.sub! /wav$/, 'mp3'
-            end
+            end if audio?
           end
       end
     end

@@ -449,3 +449,30 @@ WARNING: You're using the Ruby-based MySQL library that ships with Rails. This l
   [4;36;1mVoiceMail Columns (0.016554)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
   [4;35;1mVoiceMail Create (0.002145)[0m   [0mINSERT INTO `voice_mails` (`content_type`, `size`, `updated_at`, `type`, `report_id`, `filename`, `created_at`, `max_email_ref_num`) VALUES('audio/mp3', 45100, '2008-03-28 13:35:04', NULL, NULL, 'voice_mail_test.mp3', '2008-03-28 13:35:04', NULL)[0m
   [4;36;1mSQL (0.007066)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001801)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000976)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.010749)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mVoiceMail Create (0.019689)[0m   [0mINSERT INTO `voice_mails` (`content_type`, `size`, `updated_at`, `type`, `report_id`, `filename`, `created_at`, `max_email_ref_num`) VALUES('audio/mp3', 45100, '2008-03-28 14:27:32', NULL, NULL, 'voice_mail_test.mp3', '2008-03-28 14:27:32', NULL)[0m
+  [4;36;1mSQL (0.211443)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000674)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.001202)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.016092)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001207)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000742)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.028965)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000940)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000683)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.035162)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+  [4;35;1mVoiceMail Create (0.005353)[0m   [0mINSERT INTO `voice_mails` (`content_type`, `size`, `updated_at`, `type`, `report_id`, `filename`, `created_at`, `max_email_ref_num`) VALUES('audio/mp3', 45100, '2008-03-28 14:36:56', NULL, NULL, 'voice_mail_test.mp3', '2008-03-28 14:36:56', NULL)[0m
+  [4;36;1mSQL (0.044315)[0m   [0;1mROLLBACK[0m
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000702)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000531)[0m   [0mBEGIN[0m
+  [4;36;1mVoiceMail Columns (0.030270)[0m   [0;1mSHOW FIELDS FROM `voice_mails`[0m
+ReplayGain: -8.4dB
+  [4;35;1mVoiceMail Create (0.022165)[0m   [0mINSERT INTO `voice_mails` (`content_type`, `size`, `updated_at`, `type`, `report_id`, `filename`, `created_at`, `max_email_ref_num`) VALUES('audio/mp3', 45100, '2008-03-28 18:38:46', NULL, NULL, 'voice_mail_test.mp3', '2008-03-28 18:38:46', NULL)[0m
+  [4;36;1mSQL (0.002116)[0m   [0;1mROLLBACK[0m

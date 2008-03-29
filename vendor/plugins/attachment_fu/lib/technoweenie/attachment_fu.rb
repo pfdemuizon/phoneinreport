@@ -222,6 +222,11 @@ module Technoweenie # :nodoc:
         self.class.image?(content_type)
       end
 
+      # Checks whether the attachment's content type is audio content type
+      def audio?
+        self.class.audio?(content_type)
+      end
+
       # Returns true/false if an attachment is thumbnailable.  A thumbnailable attachment has an image content type and the parent_id attribute.
       def thumbnailable?
         image? && respond_to?(:parent_id) && parent_id.nil?
@@ -410,7 +415,6 @@ module Technoweenie # :nodoc:
 
         # Cleans up after processing.  Thumbnails are created, the attachment is stored to the backend, and the temp_paths are cleared.
         def after_process_attachment
-          debugger
           if @saved_attachment
             if respond_to?(:process_attachment_with_processing) && thumbnailable? && !attachment_options[:thumbnails].blank? && parent_id.nil?
               temp_file = temp_path || create_temp_file

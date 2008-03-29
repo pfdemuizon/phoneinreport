@@ -20,7 +20,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => 'admin', :action => 'login'
   map.namespace :admin do |admin|
-    admin.resources :operator
+    admin.resources :reports
   end
 
   # See how all your routes lay out with "rake routes"
