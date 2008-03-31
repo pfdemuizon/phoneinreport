@@ -18,4 +18,8 @@ module Admin::ReportsHelper
       )
     end
   end
+  
+  def state_form_column(report, input_name)
+    state_select(report, input_name)
+  end
 end

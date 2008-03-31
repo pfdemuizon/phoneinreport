@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 10) do
+ActiveRecord::Schema.define(:version => 11) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "event_feed_url"
@@ -38,9 +38,6 @@ ActiveRecord::Schema.define(:version => 10) do
     t.string   "phone_city"
     t.string   "phone_state"
     t.string   "file_status"
-    t.string   "file_wav_url"
-    t.string   "file_mp3_url"
-    t.integer  "length"
     t.string   "reporter_name"
     t.string   "reporter_email"
     t.text     "notes"
