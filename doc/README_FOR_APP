@@ -1,2 +1,5 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+for copying local repository to github:
+git push git@github.com:pfdemuizon/phoneinreport.git master
+
+for copying remote repository to local:
+git clone git@github.com:pfdemuizon/phoneinreport.git
