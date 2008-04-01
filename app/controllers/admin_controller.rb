@@ -11,6 +11,8 @@ class AdminController < ApplicationController
       end
       redirect_back_or_default(:controller => '/admin/reports', :action => 'index')
       flash[:notice] = "Logged in successfully"
+    else
+      flash[:notice] = "Login failed"      
     end
   end
 
@@ -41,4 +43,19 @@ protected
     flash[:notice] = "Must be an administrator to access this section."
     return false
   end
+
+  def access_denied
+    respond_to do |accepts|
+      accepts.html do
+        store_location
+        redirect_to :controller => '/admin', :action => 'login'
+      end
+      accepts.xml do
+        headers["Status"]           = "Unauthorized"
+        headers["WWW-Authenticate"] = %(Basic realm="Web Password")
+        render :text => "Could't authenticate you", :status => '401 Unauthorized'
+      end
+    end
+    false
+  end  
 end
