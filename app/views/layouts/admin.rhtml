@@ -17,7 +17,6 @@
 <div id="container">
   <div id="header">
 	  <div id="user_menu">
-      <span><%= current_user.email %></span>
       <%= mail_to 'eventhelp@radicaldesigns.org', 'help', :subject => 'Event system issue:' ,  :id => 'help' %>
     </div>
 
@@ -25,22 +24,10 @@
       <div id="site_id">Green Change</div>
     </div> 
 
-    <ul id='main_menu' class="tabs">
-      <li><%= activate_link_to "Users",   :controller => 'admin/users' %></li>
-      <li><%= activate_link_to 'Reports', :controller => 'admin/reports' %></li>
-        <li class='dropdown less'><a name="setup_options">Setup</a>
-          <ul>
-            <li><%= activate_link_to 'Calendars', :controller => 'admin/calendars', :action => 'index' %></li>
-            <li><%= link_to 'Event Categories', :controller => 'admin/categories', :action => 'index' %></li>
-            <li><%= link_to 'Host Forms', :controller => 'admin/hostforms', :action => 'index' %></li>
-            <li><%= link_to 'Email Triggers', :controller => 'admin/triggers', :action => 'index' %></li>
-          </ul>
-        </li>
-      </ul>
-		</div>
-	</div>
-  <div id="main">
-    <div id="flash"><%= flash[:notice] %></div>
+  </div>
+</div>
+<div id="main">
+  <div id="flash"><%= flash[:notice] %></div>
     <%= yield %>
   </div>
   <div id="footer">

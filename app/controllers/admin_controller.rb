@@ -4,13 +4,12 @@ class AdminController < ApplicationController
   def login
     return unless request.post?
     self.current_user = User.authenticate(params[:email], params[:password])
-    #debugger
     if logged_in?
       if params[:remember_me] == "1"
         self.current_user.remember_me
         cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       end
-      redirect_back_or_default(:controller => '/admin/operator', :action => 'index')
+      redirect_back_or_default(:controller => '/admin/reports', :action => 'index')
       flash[:notice] = "Logged in successfully"
     end
   end
@@ -39,7 +38,7 @@ class AdminController < ApplicationController
 protected
   def authorized?
     return true if current_user.admin?
-    flash[:notice] = "Mustbe an administrator to access this section."
+    flash[:notice] = "Must be an administrator to access this section."
     return false
   end
 end
