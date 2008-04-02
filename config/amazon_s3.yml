@@ -1,14 +1,15 @@
 development:
-  bucket_name: appname_development
-  access_key_id: 
-  secret_access_key: 
+  bucket_name: radicaldesigns.org
+  access_key_id: 0EMBYWPC81YB9F3X2T02
+  secret_access_key: G9HYPHkWCuSiG6YrZJLQLinMxMSQ8x9ajIx9deUj
 
 test:
-  bucket_name: appname_test
-  access_key_id: 
-  secret_access_key: 
+  bucket_name: radicaldesigns.org
+  access_key_id: 0EMBYWPC81YB9F3X2T02
+  secret_access_key: G9HYPHkWCuSiG6YrZJLQLinMxMSQ8x9ajIx9deUj
 
 production:
-  bucket_name: appname
-  access_key_id: 
-  secret_access_key: 
+  bucket_name: radicaldesigns.org
+  access_key_id: 0EMBYWPC81YB9F3X2T02
+  secret_access_key: G9HYPHkWCuSiG6YrZJLQLinMxMSQ8x9ajIx9deUj
+

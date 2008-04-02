@@ -1,5 +1,14 @@
+todo:
+- need to add rotating logs
+- remove outputting of attachments to logs
+
+
+
 for copying local repository to github:
 git push git@github.com:pfdemuizon/phoneinreport.git master
 
 for copying remote repository to local:
 git clone git@github.com:pfdemuizon/phoneinreport.git
+
+
+need to 
