@@ -2,3 +2,6 @@ config/database.yml
 log/*
 tmp/*
 public/voice_mails/*
+*.swp
+*.log
+.DS_Store
