@@ -5,7 +5,7 @@ describe VoiceMail do
     @voice_mail = VoiceMail.new
   end
 
-  it "should save wav attachment as mp3" do
+  it "should convert wav file attachment to mp3" do
     attachment = TMail::Attachment.new
     attachment.original_filename = "voice_mail_test.wav"
     attachment.content_type = "audio/wav"

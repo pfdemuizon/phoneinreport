@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 11) do
+ActiveRecord::Schema.define(:version => 12) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "event_feed_url"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 11) do
     t.datetime "updated_at"
     t.string   "host"
     t.string   "email"
+    t.integer  "site_id"
   end
 
   create_table "reports", :force => true do |t|
@@ -55,6 +56,13 @@ ActiveRecord::Schema.define(:version => 11) do
   end
 
   add_index "roles_users", ["role_id", "user_id"], :name => "unique_index_on_role_id_and_user_id"
+
+  create_table "sites", :force => true do |t|
+    t.string   "host"
+    t.string   "google_geocoder_key"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
