@@ -16,8 +16,8 @@ module Admin::ReportsHelper
     mp3_player(report)
   end
   
-  def state_form_column(report, state)
-    select(report, state, StateSelect.state_options_for_select, {:include_blank => true})
+  def state_form_column(record, input_name)
+    select(:record, :state, StateSelect.state_options_for_select, {:include_blank => true}, {:name => input_name})
   end
 
   def created_at_form_column(report, input_name)
