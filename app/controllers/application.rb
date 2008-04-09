@@ -5,13 +5,18 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   include AuthenticatedSystem
   before_filter :login_from_cookie
-  before_filter :set_campaign
-  def set_campaign
-    @campaign = Campaign.find_by_host(request.host)
+  before_filter :set_site, :set_campaign
+
+  def set_site
+    Site.current = Site.find_by_host(request.host)
+    unless Site.current
+      render :string => "Could not find #{request.host}."
+    end
   end
 
-
-  # See ActionController::RequestForgeryProtection for details
-  # Uncomment the :secret if you're not using the cookie session store
-  protect_from_forgery # :secret => '6d0356839a373488066c05010821bcc6'
+  def set_campaign
+    campaigns = Site.current.campaigns
+    @campaign = campaigns.find_by_permalink(params[:permalink]) || 
+                campaigns.current || campaigns.first
+  end
 end
