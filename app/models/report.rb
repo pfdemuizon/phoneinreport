@@ -5,6 +5,6 @@ class Report < ActiveRecord::Base
 #      :lat_column_name => 'latitude', :lng_column_name => 'longitude'
 
   def city_state
-    [@city, @state].join(', ')
+    [self.city, self.state].join(', ')
   end
 end
