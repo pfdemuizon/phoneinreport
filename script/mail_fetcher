@@ -5,13 +5,13 @@ class MailFetcherDaemon < Daemon::Base
   @sleep_time = (RAILS_ENV == 'production' ? 30 : 10)
 
   def self.start
-    non_options = %w(id campaign_id created_at updated_at)
     puts "Starting MailFetcherDaemon"
 
+    non_option_fields = %w(id campaign_id created_at updated_at)
     @fetchers = []
     Site.find(:all).each do |s|
       s.campaigns.each do |c|
-        config = c.mail_config.attributes.reject {|k,v| non_options.include?(k)}
+        config = c.mail_config.attributes.reject {|k,v| non_option_fields.include?(k)}
         config['type'] = config.delete('server_type') # rename server_type to type (can't use type because field name reserved for single table inheritance
         @fetchers << Fetcher.create({:receiver => VoiceMailHandler}.merge(config.to_options))
       end
@@ -28,16 +28,13 @@ class MailFetcherDaemon < Daemon::Base
 =begin
   @config = YAML.load_file("#{RAILS_ROOT}/config/mail_fetcher.yml")
   @config = @config[RAILS_ENV].to_options
-
   def self.start
     put "starting  MailFetcherDaemon"
     # Add your own receiver object below
     @fetcher = Fetcher.create({:receiver => VoiceMailHandler}.merge(@config))
     loop do
-      @fetchers.each do |fetcher|
-        fetcher.fetch
-        sleep(@sleep_time)
-      end
+      @fetcher.fetch
+      sleep(@sleep_time)
     end
   end
 =end
