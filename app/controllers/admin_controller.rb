@@ -9,26 +9,13 @@ class AdminController < ApplicationController
         self.current_user.remember_me
         cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       end
-      redirect_back_or_default(:controller => '/admin/reports', :action => 'index')
+      redirect_back_or_default(:permalink => @campaign.permalink, :controller => '/admin/reports', :action => 'index')
       flash[:notice] = "Logged in successfully"
     else
       flash[:notice] = "Login failed"      
     end
   end
 
-=begin
-  def signup
-    @user = User.new(params[:user])
-    return unless request.post?
-    @user.save!
-    self.current_user = @user
-    redirect_back_or_default(:controller => '/account', :action => 'index')
-    flash[:notice] = "Thanks for signing up!"
-  rescue ActiveRecord::RecordInvalid
-    render :action => 'signup'
-  end
-=end
-  
   def logout
     self.current_user.forget_me if logged_in?
     cookies.delete :auth_token

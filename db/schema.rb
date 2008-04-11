@@ -9,14 +9,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 13) do
+ActiveRecord::Schema.define(:version => 14) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "event_feed_url"
-    t.string   "pop_server"
-    t.string   "pop_user"
-    t.string   "pop_pw"
-    t.integer  "pop_port"
     t.string   "s3_bucket"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,6 +20,18 @@ ActiveRecord::Schema.define(:version => 13) do
     t.integer  "site_id"
     t.string   "permalink"
     t.boolean  "current"
+  end
+
+  create_table "mail_configs", :force => true do |t|
+    t.integer  "campaign_id"
+    t.string   "server_type"
+    t.string   "server"
+    t.string   "username"
+    t.string   "password"
+    t.integer  "port"
+    t.boolean  "ssl"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "reports", :force => true do |t|
