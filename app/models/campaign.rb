@@ -4,4 +4,5 @@ class Campaign < ActiveRecord::Base
   has_many :users
   has_one :mail_config
   validates_associated :mail_config
+  cattr_accessor :current
 end
