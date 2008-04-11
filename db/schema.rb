@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 12) do
+ActiveRecord::Schema.define(:version => 13) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "event_feed_url"
@@ -18,13 +18,12 @@ ActiveRecord::Schema.define(:version => 12) do
     t.string   "pop_pw"
     t.integer  "pop_port"
     t.string   "s3_bucket"
-    t.string   "s3_key"
-    t.string   "s3_user"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "host"
     t.string   "email"
     t.integer  "site_id"
+    t.string   "permalink"
+    t.boolean  "current"
   end
 
   create_table "reports", :force => true do |t|
@@ -59,7 +58,8 @@ ActiveRecord::Schema.define(:version => 12) do
 
   create_table "sites", :force => true do |t|
     t.string   "host"
-    t.string   "google_geocoder_key"
+    t.string   "s3_key"
+    t.string   "s3_user"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
