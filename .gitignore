@@ -1,4 +1,4 @@
-config/database.yml
+*.yml
 log/*
 tmp/*
 public/voice_mails/*
