@@ -8,7 +8,7 @@ class Admin::ReportsController < AdminController
   	config.actions.exclude :create
 
     config.columns[:file_status].label = "Report status"
-    config.columns[:reporter_name].label = "Persons name"
+    config.columns[:reporter_name].label = "Person's name"
   end
 
   skip_before_filter :login_required, :only => :feed

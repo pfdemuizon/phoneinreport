@@ -7,7 +7,7 @@
   </dd>
   <dd>
     <% if @record.phone_state -%>
-      <%= button_to_function "copy", "$('record[state]').value = #{@record.phone_state}" %>
+      <%= button_to_function "copy", "$('record_state').value = '#{@record.phone_state}'" %>
       <label> Phone state: <%= @record.phone_state %></label>
     <% end -%>
   </dd>
