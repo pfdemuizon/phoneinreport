@@ -1,6 +1,6 @@
 class DefaultFileStatus < ActiveRecord::Migration
   def self.up
-    change_column_default(:reports, :file_status, :default => "pending")
+    change_column_default(:reports, :file_status, "pending")
     Report.find(:all).each {|r| r.file_status = "pending"; r.save}
   end
 

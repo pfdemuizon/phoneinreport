@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 16) do
     t.string   "phone"
     t.string   "phone_city"
     t.string   "phone_state"
-    t.string   "file_status",    :default => "--- \n:default: pending\n"
+    t.string   "file_status",    :default => "pending"
     t.string   "reporter_name"
     t.string   "reporter_email"
     t.text     "notes"
