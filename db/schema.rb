@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 14) do
+ActiveRecord::Schema.define(:version => 16) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "event_feed_url"
@@ -39,13 +39,13 @@ ActiveRecord::Schema.define(:version => 14) do
     t.integer  "campaign_id"
     t.string   "city"
     t.string   "state"
-    t.string   "country"
+    t.integer  "country_code",   :default => 840
     t.float    "latitude"
     t.float    "longitude"
     t.string   "phone"
     t.string   "phone_city"
     t.string   "phone_state"
-    t.string   "file_status"
+    t.string   "file_status",    :default => "--- \n:default: pending\n"
     t.string   "reporter_name"
     t.string   "reporter_email"
     t.text     "notes"

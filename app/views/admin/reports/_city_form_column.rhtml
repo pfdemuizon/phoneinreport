@@ -1,0 +1,14 @@
+<dl>
+  <dt>
+    <label>City</label>
+  </dt>
+  <dd> 
+    <%= text_field(:record, :city) %>
+  </dd>
+  <dd>
+    <% if @record.phone_city -%>
+      <%= button_to_function "copy", "$('record_city').value = '#{@record.phone_city}'" %>
+      <label> Phone city: <%= @record.phone_city %></label>
+    <% end -%>
+  </dd>
+</dl

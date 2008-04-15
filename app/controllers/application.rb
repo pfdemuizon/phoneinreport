@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   before_filter :set_site, :set_campaign
 
   def set_site
-    Site.current = Site.find_by_host(request.host)
+    Site.current = Site.find_by_host(request.host, :include => :campaigns)
     unless Site.current
       render :string => "Could not find #{request.host}."
     end
@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   def set_campaign
     campaigns = Site.current.campaigns
-    @campaign = campaigns.find_by_permalink(params[:permalink]) || 
-                campaigns.current || campaigns.first
+    Campaign.current = campaigns.find_by_permalink(params[:permalink]) || campaigns.current || campaigns.first
+    @campaign = Campaign.current
   end
 end
