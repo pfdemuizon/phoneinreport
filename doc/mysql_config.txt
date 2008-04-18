@@ -1,0 +1,24 @@
+patrice/1500finches
+
+
+INSERT INTO user (host, user, password, select_priv, insert_priv, update_priv) VALUES ('localhost', 'phoneinreport', PASSWORD('phoneinreport'), 'Y', 'Y', 'Y');
+DELETE FROM user WHERE user = 'phoneinreport';
+INSERT INTO user (host, user, password) VALUES ('localhost', 'phoneinreport', PASSWORD('phoneinreport'));
+select * from user;
+grant all on phoneinreport.* to 'phoneinreport'@'localhost' identified by 'phoneinreport';
+select * from user where user = 'phoneinreport'
+;
+grant all on phoneinreport_development.* to 'phoneinreport'@'localhost' identified by 'phoneinreport';
+select user from user where user = 'phoneinreport'
+;
+select user from user
+;
+select user, host, password from user
+;
+flush privileges;
+select user, host, password from user
+;
+grant all on phoneinreport_development.* to 'phoneinreport'@'localhost' identified by 'phoneinreport';
+flush privileges;
+quit;
+show databases;
