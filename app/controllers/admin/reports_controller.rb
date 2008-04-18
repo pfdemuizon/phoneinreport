@@ -15,7 +15,7 @@ class Admin::ReportsController < AdminController
   def feed 
     @reports = @campaign.reports.find(:all, :conditions => ["file_status = ? OR file_status = ?", "tagged", "tagged_and_geocoded"])
     respond_to do |format|
-      format.xml {render :xml => @reports.to_xml(:except => [:phone_city, :phone_state, :reporter_email])}
+      format.xml {render :xml => @reports.to_xml(:methods => [:voice_mail_url], :except => [:phone_city, :phone_state, :reporter_email])}
     end
   end
 
