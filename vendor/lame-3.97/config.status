@@ -500,34 +500,34 @@ s,@ECHO_C@,,;t t
 s,@ECHO_N@,-n,;t t
 s,@ECHO_T@,,;t t
 s,@LIBS@,,;t t
-s,@build@,powerpc-apple-darwin7.9.0,;t t
-s,@build_cpu@,powerpc,;t t
-s,@build_vendor@,apple,;t t
-s,@build_os@,darwin7.9.0,;t t
-s,@host@,powerpc-apple-darwin7.9.0,;t t
-s,@host_cpu@,powerpc,;t t
-s,@host_vendor@,apple,;t t
-s,@host_os@,darwin7.9.0,;t t
+s,@build@,x86_64-unknown-linux-gnu,;t t
+s,@build_cpu@,x86_64,;t t
+s,@build_vendor@,unknown,;t t
+s,@build_os@,linux-gnu,;t t
+s,@host@,x86_64-unknown-linux-gnu,;t t
+s,@host_cpu@,x86_64,;t t
+s,@host_vendor@,unknown,;t t
+s,@host_os@,linux-gnu,;t t
 s,@INSTALL_PROGRAM@,${INSTALL},;t t
 s,@INSTALL_SCRIPT@,${INSTALL},;t t
 s,@INSTALL_DATA@,${INSTALL} -m 644,;t t
 s,@CYGPATH_W@,echo,;t t
 s,@PACKAGE@,lame,;t t
 s,@VERSION@,3.97,;t t
-s,@ACLOCAL@,${SHELL} /Users/patricedemuizon/dev/phoneinreport/vendor/lame-3.97/missing --run aclocal-1.9,;t t
-s,@AUTOCONF@,${SHELL} /Users/patricedemuizon/dev/phoneinreport/vendor/lame-3.97/missing --run autoconf,;t t
-s,@AUTOMAKE@,${SHELL} /Users/patricedemuizon/dev/phoneinreport/vendor/lame-3.97/missing --run automake-1.9,;t t
-s,@AUTOHEADER@,${SHELL} /Users/patricedemuizon/dev/phoneinreport/vendor/lame-3.97/missing --run autoheader,;t t
-s,@MAKEINFO@,${SHELL} /Users/patricedemuizon/dev/phoneinreport/vendor/lame-3.97/missing --run makeinfo,;t t
-s,@install_sh@,/Users/patricedemuizon/dev/phoneinreport/vendor/lame-3.97/install-sh,;t t
+s,@ACLOCAL@,${SHELL} /var/www/phoneinreport/vendor/lame-3.97/missing --run aclocal-1.9,;t t
+s,@AUTOCONF@,${SHELL} /var/www/phoneinreport/vendor/lame-3.97/missing --run autoconf,;t t
+s,@AUTOMAKE@,${SHELL} /var/www/phoneinreport/vendor/lame-3.97/missing --run automake-1.9,;t t
+s,@AUTOHEADER@,${SHELL} /var/www/phoneinreport/vendor/lame-3.97/missing --run autoheader,;t t
+s,@MAKEINFO@,${SHELL} /var/www/phoneinreport/vendor/lame-3.97/missing --run makeinfo,;t t
+s,@install_sh@,/var/www/phoneinreport/vendor/lame-3.97/install-sh,;t t
 s,@STRIP@,strip,;t t
 s,@ac_ct_STRIP@,strip,;t t
 s,@INSTALL_STRIP_PROGRAM@,${SHELL} $(install_sh) -c -s,;t t
 s,@mkdir_p@,mkdir -p --,;t t
-s,@AWK@,awk,;t t
+s,@AWK@,mawk,;t t
 s,@SET_MAKE@,,;t t
 s,@am__leading_dot@,.,;t t
-s,@AMTAR@,${SHELL} /Users/patricedemuizon/dev/phoneinreport/vendor/lame-3.97/missing --run tar,;t t
+s,@AMTAR@,${SHELL} /var/www/phoneinreport/vendor/lame-3.97/missing --run tar,;t t
 s,@am__tar@,${AMTAR} chof - "$$tardir",;t t
 s,@am__untar@,${AMTAR} xf -,;t t
 s,@MAINTAINER_MODE_TRUE@,#,;t t
@@ -536,7 +536,7 @@ s,@MAINT@,#,;t t
 s,@am__include@,include,;t t
 s,@am__quote@,,;t t
 s,@CC@,gcc,;t t
-s,@CFLAGS@,-O3  -ffast-math 			-funroll-loops -Wall  -fno-common,;t t
+s,@CFLAGS@,-O3  -ffast-math 			-funroll-loops -Wall -pipe ,;t t
 s,@LDFLAGS@,,;t t
 s,@CPPFLAGS@,,;t t
 s,@ac_ct_CC@,gcc,;t t
@@ -558,12 +558,12 @@ s,@ac_ct_AR@,ar,;t t
 s,@RANLIB@,ranlib,;t t
 s,@ac_ct_RANLIB@,ranlib,;t t
 s,@CXX@,g++,;t t
-s,@CXXFLAGS@,-g -O2,;t t
+s,@CXXFLAGS@,,;t t
 s,@ac_ct_CXX@,g++,;t t
-s,@CXXDEPMODE@,depmode=gcc3,;t t
-s,@am__fastdepCXX_TRUE@,,;t t
-s,@am__fastdepCXX_FALSE@,#,;t t
-s,@CXXCPP@,g++ -E,;t t
+s,@CXXDEPMODE@,depmode=none,;t t
+s,@am__fastdepCXX_TRUE@,#,;t t
+s,@am__fastdepCXX_FALSE@,,;t t
+s,@CXXCPP@,,;t t
 s,@F77@,,;t t
 s,@FFLAGS@,,;t t
 s,@ac_ct_F77@,,;t t
@@ -585,12 +585,12 @@ s,@HAVE_NASM_FALSE@,,;t t
 s,@INCLUDES@,-I$(top_srcdir)/include -I$(srcdir),;t t
 s,@FRONTEND_LDFLAGS@,,;t t
 s,@FRONTEND_CFLAGS@,,;t t
-s,@FRONTEND_LDADD@,-lncurses  -lm,;t t
+s,@FRONTEND_LDADD@, -lm,;t t
 s,@LDADD@,,;t t
 s,@LIB_MAJOR_VERSION@,0,;t t
 s,@LIB_MINOR_VERSION@,0,;t t
 s,@NASM_FORMAT@,-f elf,;t t
-s,@MAKEDEP@,-make,;t t
+s,@MAKEDEP@,-M,;t t
 s,@RM_F@,rm -f,;t t
 s,@WITH_FRONTEND@,lame,;t t
 s,@WITH_MP3X@,,;t t
@@ -934,17 +934,17 @@ ${ac_dA}HAVE_FCNTL_H${ac_dB}HAVE_FCNTL_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_LIMITS_H${ac_dB}HAVE_LIMITS_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_STDINT_H${ac_dB}HAVE_STDINT_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_STRING_H${ac_dB}HAVE_STRING_H${ac_dC}1${ac_dD}
+${ac_dA}HAVE_SYS_SOUNDCARD_H${ac_dB}HAVE_SYS_SOUNDCARD_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_SYS_TIME_H${ac_dB}HAVE_SYS_TIME_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_UNISTD_H${ac_dB}HAVE_UNISTD_H${ac_dC}1${ac_dD}
-${ac_dA}WORDS_BIGENDIAN${ac_dB}WORDS_BIGENDIAN${ac_dC}1${ac_dD}
+${ac_dA}HAVE_LINUX_SOUNDCARD_H${ac_dB}HAVE_LINUX_SOUNDCARD_H${ac_dC}1${ac_dD}
 ${ac_dA}SIZEOF_SHORT${ac_dB}SIZEOF_SHORT${ac_dC}2${ac_dD}
 ${ac_dA}SIZEOF_UNSIGNED_SHORT${ac_dB}SIZEOF_UNSIGNED_SHORT${ac_dC}2${ac_dD}
 ${ac_dA}SIZEOF_INT${ac_dB}SIZEOF_INT${ac_dC}4${ac_dD}
 ${ac_dA}SIZEOF_UNSIGNED_INT${ac_dB}SIZEOF_UNSIGNED_INT${ac_dC}4${ac_dD}
-${ac_dA}SIZEOF_LONG${ac_dB}SIZEOF_LONG${ac_dC}4${ac_dD}
-${ac_dA}SIZEOF_UNSIGNED_LONG${ac_dB}SIZEOF_UNSIGNED_LONG${ac_dC}4${ac_dD}
+${ac_dA}SIZEOF_LONG${ac_dB}SIZEOF_LONG${ac_dC}8${ac_dD}
+${ac_dA}SIZEOF_UNSIGNED_LONG${ac_dB}SIZEOF_UNSIGNED_LONG${ac_dC}8${ac_dD}
 ${ac_dA}SIZEOF_LONG_LONG${ac_dB}SIZEOF_LONG_LONG${ac_dC}8${ac_dD}
-${ac_dA}SIZEOF_UNSIGNED_LONG_LONG${ac_dB}SIZEOF_UNSIGNED_LONG_LONG${ac_dC}8${ac_dD}
 CEOF
   sed -f $tmp/defines.sed $tmp/in >$tmp/out
   rm -f $tmp/in
@@ -954,8 +954,10 @@ CEOF
 /^[	 ]*#[	 ]*define/!b
 t clr
 : clr
+${ac_dA}SIZEOF_UNSIGNED_LONG_LONG${ac_dB}SIZEOF_UNSIGNED_LONG_LONG${ac_dC}8${ac_dD}
 ${ac_dA}SIZEOF_FLOAT${ac_dB}SIZEOF_FLOAT${ac_dC}4${ac_dD}
 ${ac_dA}SIZEOF_DOUBLE${ac_dB}SIZEOF_DOUBLE${ac_dC}8${ac_dD}
+${ac_dA}HAVE_LONG_DOUBLE${ac_dB}HAVE_LONG_DOUBLE${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_UINT8_T${ac_dB}HAVE_UINT8_T${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_INT8_T${ac_dB}HAVE_INT8_T${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_UINT16_T${ac_dB}HAVE_UINT16_T${ac_dC}1${ac_dD}
@@ -966,8 +968,9 @@ ${ac_dA}HAVE_UINT64_T${ac_dB}HAVE_UINT64_T${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_INT64_T${ac_dB}HAVE_INT64_T${ac_dC}1${ac_dD}
 ${ac_dA}A_UINT32_T${ac_dB}A_UINT32_T${ac_dC}unsigned int${ac_dD}
 ${ac_dA}A_INT32_T${ac_dB}A_INT32_T${ac_dC}int${ac_dD}
-${ac_dA}A_UINT64_T${ac_dB}A_UINT64_T${ac_dC}unsigned long long${ac_dD}
-${ac_dA}A_INT64_T${ac_dB}A_INT64_T${ac_dC}long long${ac_dD}
+${ac_dA}A_UINT64_T${ac_dB}A_UINT64_T${ac_dC}unsigned long${ac_dD}
+${ac_dA}A_INT64_T${ac_dB}A_INT64_T${ac_dC}long${ac_dD}
+${ac_dA}HAVE_IEEE854_FLOAT80${ac_dB}HAVE_IEEE854_FLOAT80${ac_dC}1${ac_dD}
 ${ac_dA}LAME_LIBRARY_BUILD${ac_dB}LAME_LIBRARY_BUILD${ac_dC}1${ac_dD}
 ${ac_dA}TIME_WITH_SYS_TIME${ac_dB}TIME_WITH_SYS_TIME${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_ALLOCA_H${ac_dB}HAVE_ALLOCA_H${ac_dC}1${ac_dD}
@@ -975,14 +978,10 @@ ${ac_dA}HAVE_ALLOCA${ac_dB}HAVE_ALLOCA${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_GETTIMEOFDAY${ac_dB}HAVE_GETTIMEOFDAY${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_STRTOL${ac_dB}HAVE_STRTOL${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_SOCKET${ac_dB}HAVE_SOCKET${ac_dC}1${ac_dD}
-${ac_dA}HAVE_TERMCAP_H${ac_dB}HAVE_TERMCAP_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_MPGLIB${ac_dB}HAVE_MPGLIB${ac_dC}1${ac_dD}
 ${ac_dA}DECODE_ON_THE_FLY${ac_dB}DECODE_ON_THE_FLY${ac_dC}1${ac_dD}
 ${ac_dA}USE_LAYER_2${ac_dB}USE_LAYER_2${ac_dC}1${ac_dD}
 ${ac_dA}BRHIST${ac_dB}BRHIST${ac_dC}1${ac_dD}
-${ac_dA}HAVE_TERMCAP${ac_dB}HAVE_TERMCAP${ac_dC}1${ac_dD}
-${ac_dA}TAKEHIRO_IEEE754_HACK${ac_dB}TAKEHIRO_IEEE754_HACK${ac_dC}1${ac_dD}
-${ac_dA}USE_FAST_LOG${ac_dB}USE_FAST_LOG${ac_dC}1${ac_dD}
 ${ac_dA}NDEBUG${ac_dB}NDEBUG${ac_dC}1${ac_dD}
 CEOF
   sed -f $tmp/defines.sed $tmp/in >$tmp/out
@@ -1023,17 +1022,17 @@ ${ac_uA}HAVE_FCNTL_H${ac_uB}HAVE_FCNTL_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_LIMITS_H${ac_uB}HAVE_LIMITS_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_STDINT_H${ac_uB}HAVE_STDINT_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_STRING_H${ac_uB}HAVE_STRING_H${ac_uC}1${ac_uD}
+${ac_uA}HAVE_SYS_SOUNDCARD_H${ac_uB}HAVE_SYS_SOUNDCARD_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_SYS_TIME_H${ac_uB}HAVE_SYS_TIME_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_UNISTD_H${ac_uB}HAVE_UNISTD_H${ac_uC}1${ac_uD}
-${ac_uA}WORDS_BIGENDIAN${ac_uB}WORDS_BIGENDIAN${ac_uC}1${ac_uD}
+${ac_uA}HAVE_LINUX_SOUNDCARD_H${ac_uB}HAVE_LINUX_SOUNDCARD_H${ac_uC}1${ac_uD}
 ${ac_uA}SIZEOF_SHORT${ac_uB}SIZEOF_SHORT${ac_uC}2${ac_uD}
 ${ac_uA}SIZEOF_UNSIGNED_SHORT${ac_uB}SIZEOF_UNSIGNED_SHORT${ac_uC}2${ac_uD}
 ${ac_uA}SIZEOF_INT${ac_uB}SIZEOF_INT${ac_uC}4${ac_uD}
 ${ac_uA}SIZEOF_UNSIGNED_INT${ac_uB}SIZEOF_UNSIGNED_INT${ac_uC}4${ac_uD}
-${ac_uA}SIZEOF_LONG${ac_uB}SIZEOF_LONG${ac_uC}4${ac_uD}
-${ac_uA}SIZEOF_UNSIGNED_LONG${ac_uB}SIZEOF_UNSIGNED_LONG${ac_uC}4${ac_uD}
+${ac_uA}SIZEOF_LONG${ac_uB}SIZEOF_LONG${ac_uC}8${ac_uD}
+${ac_uA}SIZEOF_UNSIGNED_LONG${ac_uB}SIZEOF_UNSIGNED_LONG${ac_uC}8${ac_uD}
 ${ac_uA}SIZEOF_LONG_LONG${ac_uB}SIZEOF_LONG_LONG${ac_uC}8${ac_uD}
-${ac_uA}SIZEOF_UNSIGNED_LONG_LONG${ac_uB}SIZEOF_UNSIGNED_LONG_LONG${ac_uC}8${ac_uD}
 CEOF
   sed -f $tmp/undefs.sed $tmp/in >$tmp/out
   rm -f $tmp/in
@@ -1043,8 +1042,10 @@ CEOF
 /^[	 ]*#[	 ]*undef/!b
 t clr
 : clr
+${ac_uA}SIZEOF_UNSIGNED_LONG_LONG${ac_uB}SIZEOF_UNSIGNED_LONG_LONG${ac_uC}8${ac_uD}
 ${ac_uA}SIZEOF_FLOAT${ac_uB}SIZEOF_FLOAT${ac_uC}4${ac_uD}
 ${ac_uA}SIZEOF_DOUBLE${ac_uB}SIZEOF_DOUBLE${ac_uC}8${ac_uD}
+${ac_uA}HAVE_LONG_DOUBLE${ac_uB}HAVE_LONG_DOUBLE${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_UINT8_T${ac_uB}HAVE_UINT8_T${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_INT8_T${ac_uB}HAVE_INT8_T${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_UINT16_T${ac_uB}HAVE_UINT16_T${ac_uC}1${ac_uD}
@@ -1055,8 +1056,9 @@ ${ac_uA}HAVE_UINT64_T${ac_uB}HAVE_UINT64_T${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_INT64_T${ac_uB}HAVE_INT64_T${ac_uC}1${ac_uD}
 ${ac_uA}A_UINT32_T${ac_uB}A_UINT32_T${ac_uC}unsigned int${ac_uD}
 ${ac_uA}A_INT32_T${ac_uB}A_INT32_T${ac_uC}int${ac_uD}
-${ac_uA}A_UINT64_T${ac_uB}A_UINT64_T${ac_uC}unsigned long long${ac_uD}
-${ac_uA}A_INT64_T${ac_uB}A_INT64_T${ac_uC}long long${ac_uD}
+${ac_uA}A_UINT64_T${ac_uB}A_UINT64_T${ac_uC}unsigned long${ac_uD}
+${ac_uA}A_INT64_T${ac_uB}A_INT64_T${ac_uC}long${ac_uD}
+${ac_uA}HAVE_IEEE854_FLOAT80${ac_uB}HAVE_IEEE854_FLOAT80${ac_uC}1${ac_uD}
 ${ac_uA}LAME_LIBRARY_BUILD${ac_uB}LAME_LIBRARY_BUILD${ac_uC}1${ac_uD}
 ${ac_uA}TIME_WITH_SYS_TIME${ac_uB}TIME_WITH_SYS_TIME${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_ALLOCA_H${ac_uB}HAVE_ALLOCA_H${ac_uC}1${ac_uD}
@@ -1064,14 +1066,10 @@ ${ac_uA}HAVE_ALLOCA${ac_uB}HAVE_ALLOCA${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_GETTIMEOFDAY${ac_uB}HAVE_GETTIMEOFDAY${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_STRTOL${ac_uB}HAVE_STRTOL${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_SOCKET${ac_uB}HAVE_SOCKET${ac_uC}1${ac_uD}
-${ac_uA}HAVE_TERMCAP_H${ac_uB}HAVE_TERMCAP_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_MPGLIB${ac_uB}HAVE_MPGLIB${ac_uC}1${ac_uD}
 ${ac_uA}DECODE_ON_THE_FLY${ac_uB}DECODE_ON_THE_FLY${ac_uC}1${ac_uD}
 ${ac_uA}USE_LAYER_2${ac_uB}USE_LAYER_2${ac_uC}1${ac_uD}
 ${ac_uA}BRHIST${ac_uB}BRHIST${ac_uC}1${ac_uD}
-${ac_uA}HAVE_TERMCAP${ac_uB}HAVE_TERMCAP${ac_uC}1${ac_uD}
-${ac_uA}TAKEHIRO_IEEE754_HACK${ac_uB}TAKEHIRO_IEEE754_HACK${ac_uC}1${ac_uD}
-${ac_uA}USE_FAST_LOG${ac_uB}USE_FAST_LOG${ac_uC}1${ac_uD}
 ${ac_uA}NDEBUG${ac_uB}NDEBUG${ac_uC}1${ac_uD}
 s,^[	 ]*#[	 ]*undef[	 ][	 ]*[a-zA-Z_][a-zA-Z_0-9]*,/* & */,
 CEOF

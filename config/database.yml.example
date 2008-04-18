@@ -17,9 +17,9 @@
 development:
   adapter: mysql
   encoding: utf8
-  database: phoneinreport_development
-  username: phoneinreport 
-  password: 8Sibdo7j
+  database: database_development
+  username: username 
+  password: password 
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as 'test' will be erased and
@@ -28,15 +28,15 @@ development:
 test:
   adapter: mysql
   encoding: utf8
-  database: phoneinreport_test
-  username: phoneinreport 
-  password: 7DSidySXC
+  database: database_test 
+  username: username 
+  password: password 
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql
   encoding: utf8
-  database: phoneinreport_production
-  username: root
-  password: 1D7HYVgfj 
+  database: database_production
+  username: username
+  password: password
   socket: /var/run/mysqld/mysqld.sock

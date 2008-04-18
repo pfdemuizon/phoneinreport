@@ -1,20 +1,32 @@
 util.lo util.o: util.c ../config.h util.h machine.h /usr/include/stdio.h \
-  /usr/include/sys/types.h /usr/include/sys/appleapiopts.h \
-  /usr/include/sys/cdefs.h /usr/include/machine/types.h \
-  /usr/include/ppc/types.h /usr/include/machine/ansi.h \
-  /usr/include/ppc/ansi.h /usr/include/machine/endian.h \
-  /usr/include/ppc/endian.h /usr/include/stdlib.h /usr/include/alloca.h \
-  /usr/include/string.h /usr/include/math.h \
-  /usr/include/architecture/ppc/math.h /usr/include/ctype.h \
-  /usr/include/runetype.h /usr/include/errno.h /usr/include/sys/errno.h \
-  /usr/include/fcntl.h /usr/include/sys/fcntl.h /usr/include/sys/stat.h \
-  /usr/include/sys/time.h /usr/include/time.h \
-  /usr/include/gcc/darwin/3.3/machine/limits.h /usr/include/ppc/limits.h \
-  encoder.h ../include/lame.h /usr/include/gcc/darwin/3.3/stdarg.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/gnu/stubs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/wordsize.h \
+  /usr/include/bits/typesizes.h /usr/include/libio.h \
+  /usr/include/_G_config.h /usr/include/wchar.h /usr/include/bits/wchar.h \
+  /usr/include/gconv.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/time.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+  /usr/include/string.h /usr/include/bits/string.h \
+  /usr/include/bits/string2.h /usr/include/math.h \
+  /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h \
+  /usr/include/bits/mathcalls.h /usr/include/bits/mathinline.h \
+  /usr/include/ctype.h /usr/include/errno.h /usr/include/bits/errno.h \
+  /usr/include/linux/errno.h /usr/include/asm/errno.h \
+  /usr/include/asm-x86_64/errno.h /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h /usr/include/fcntl.h \
+  /usr/include/bits/fcntl.h /usr/include/sys/stat.h \
+  /usr/include/bits/stat.h encoder.h ../include/lame.h \
   lame_global_flags.h lame-analysis.h id3tag.h gain_analysis.h \
-  /usr/include/gcc/darwin/3.3/inttypes.h \
-  /usr/include/gcc/darwin/3.3/stdint.h l3side.h \
-  /usr/include/gcc/darwin/3.3/assert.h
+  /usr/include/inttypes.h /usr/include/stdint.h l3side.h \
+  /usr/include/assert.h
 
 ../config.h:
 
@@ -24,61 +36,105 @@ machine.h:
 
 /usr/include/stdio.h:
 
-/usr/include/sys/types.h:
-
-/usr/include/sys/appleapiopts.h:
+/usr/include/features.h:
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/machine/types.h:
+/usr/include/gnu/stubs.h:
 
-/usr/include/ppc/types.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stddef.h:
 
-/usr/include/machine/ansi.h:
+/usr/include/bits/types.h:
 
-/usr/include/ppc/ansi.h:
+/usr/include/bits/wordsize.h:
 
-/usr/include/machine/endian.h:
+/usr/include/bits/typesizes.h:
 
-/usr/include/ppc/endian.h:
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/gconv.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
 
 /usr/include/alloca.h:
 
 /usr/include/string.h:
 
+/usr/include/bits/string.h:
+
+/usr/include/bits/string2.h:
+
 /usr/include/math.h:
 
-/usr/include/architecture/ppc/math.h:
+/usr/include/bits/huge_val.h:
+
+/usr/include/bits/mathdef.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/mathinline.h:
 
 /usr/include/ctype.h:
 
-/usr/include/runetype.h:
-
 /usr/include/errno.h:
 
-/usr/include/sys/errno.h:
+/usr/include/bits/errno.h:
+
+/usr/include/linux/errno.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/asm-x86_64/errno.h:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/asm-generic/errno-base.h:
 
 /usr/include/fcntl.h:
 
-/usr/include/sys/fcntl.h:
+/usr/include/bits/fcntl.h:
 
 /usr/include/sys/stat.h:
 
-/usr/include/sys/time.h:
-
-/usr/include/time.h:
-
-/usr/include/gcc/darwin/3.3/machine/limits.h:
-
-/usr/include/ppc/limits.h:
+/usr/include/bits/stat.h:
 
 encoder.h:
 
 ../include/lame.h:
-
-/usr/include/gcc/darwin/3.3/stdarg.h:
 
 lame_global_flags.h:
 
@@ -88,10 +144,10 @@ id3tag.h:
 
 gain_analysis.h:
 
-/usr/include/gcc/darwin/3.3/inttypes.h:
+/usr/include/inttypes.h:
 
-/usr/include/gcc/darwin/3.3/stdint.h:
+/usr/include/stdint.h:
 
 l3side.h:
 
-/usr/include/gcc/darwin/3.3/assert.h:
+/usr/include/assert.h:

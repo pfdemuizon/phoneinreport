@@ -65,7 +65,7 @@
 #endif
 
 /* system has 80 bit floats */
-/* #undef HAVE_IEEE854_FLOAT80 */
+#define HAVE_IEEE854_FLOAT80 1
 
 /* add ieee854_float80_t type */
 /* #undef HAVE_IEEE854_FLOAT80_T */
@@ -89,7 +89,7 @@
 /* add int64_t type */
 #define HAVE_INT64_T 1
 #ifndef HAVE_INT64_T
-#define A_INT64_T long long
+#define A_INT64_T long
 	typedef A_INT64_T int64_t;
 #endif
 
@@ -106,11 +106,11 @@
 #define HAVE_LIMITS_H 1
 
 /* Define to 1 if you have the <linux/soundcard.h> header file. */
-/* #undef HAVE_LINUX_SOUNDCARD_H */
+#define HAVE_LINUX_SOUNDCARD_H 1
 
 /* Define to 1 if long double works and has more range or precision than
    double. */
-/* #undef HAVE_LONG_DOUBLE */
+#define HAVE_LONG_DOUBLE 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
@@ -143,7 +143,7 @@
 #define HAVE_STRTOL 1
 
 /* Define to 1 if you have the <sys/soundcard.h> header file. */
-/* #undef HAVE_SYS_SOUNDCARD_H */
+#define HAVE_SYS_SOUNDCARD_H 1
 
 /* Define to 1 if you have the <sys/stat.h> header file. */
 #define HAVE_SYS_STAT_H 1
@@ -155,10 +155,10 @@
 #define HAVE_SYS_TYPES_H 1
 
 /* have termcap */
-#define HAVE_TERMCAP 1
+/* #undef HAVE_TERMCAP */
 
 /* Define to 1 if you have the <termcap.h> header file. */
-#define HAVE_TERMCAP_H 1
+/* #undef HAVE_TERMCAP_H */
 
 /* add uint16_t type */
 #define HAVE_UINT16_T 1
@@ -176,7 +176,7 @@
 /* add uint64_t type */
 #define HAVE_UINT64_T 1
 #ifndef HAVE_UINT64_T
-#define A_UINT64_T unsigned long long
+#define A_UINT64_T unsigned long
 	typedef A_UINT64_T uint64_t;
 #endif
 
@@ -238,7 +238,7 @@
 #define SIZEOF_INT 4
 
 /* The size of a `long', as computed by sizeof. */
-#define SIZEOF_LONG 4
+#define SIZEOF_LONG 8
 
 /* The size of a `long double', as computed by sizeof. */
 /* #undef SIZEOF_LONG_DOUBLE */
@@ -253,7 +253,7 @@
 #define SIZEOF_UNSIGNED_INT 4
 
 /* The size of a `unsigned long', as computed by sizeof. */
-#define SIZEOF_UNSIGNED_LONG 4
+#define SIZEOF_UNSIGNED_LONG 8
 
 /* The size of a `unsigned long long', as computed by sizeof. */
 #define SIZEOF_UNSIGNED_LONG_LONG 8
@@ -273,13 +273,13 @@
 #define STDC_HEADERS 1
 
 /* IEEE754 compatible machine */
-#define TAKEHIRO_IEEE754_HACK 1
+/* #undef TAKEHIRO_IEEE754_HACK */
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #define TIME_WITH_SYS_TIME 1
 
 /* faster log implementation with less but enough precission */
-#define USE_FAST_LOG 1
+/* #undef USE_FAST_LOG */
 
 /* build with layer 1 decoding */
 /* #undef USE_LAYER_1 */
@@ -295,7 +295,7 @@
 
 /* Define to 1 if your processor stores words with the most significant byte
    first (like Motorola and SPARC, unlike Intel and VAX). */
-#define WORDS_BIGENDIAN 1
+/* #undef WORDS_BIGENDIAN */
 
 /* Define to 1 if on AIX 3.
    System headers sometimes define this.

@@ -1,60 +1,107 @@
-timestatus.o timestatus.o: timestatus.c ../config.h \
-  /usr/include/gcc/darwin/3.3/assert.h /usr/include/time.h \
-  /usr/include/machine/ansi.h /usr/include/ppc/ansi.h \
-  /usr/include/gcc/darwin/3.3/machine/limits.h /usr/include/ppc/limits.h \
-  /usr/include/sys/cdefs.h ../include/lame.h /usr/include/stdio.h \
-  /usr/include/sys/types.h /usr/include/sys/appleapiopts.h \
-  /usr/include/machine/types.h /usr/include/ppc/types.h \
-  /usr/include/machine/endian.h /usr/include/ppc/endian.h \
-  /usr/include/gcc/darwin/3.3/stdarg.h main.h /usr/include/limits.h \
-  /usr/include/sys/syslimits.h get_audio.h portableio.h lametime.h \
+timestatus.o timestatus.o: timestatus.c ../config.h /usr/include/assert.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/gnu/stubs.h /usr/include/time.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stddef.h \
+  /usr/include/bits/time.h /usr/include/bits/types.h \
+  /usr/include/bits/wordsize.h /usr/include/bits/typesizes.h \
+  ../include/lame.h /usr/include/stdio.h /usr/include/libio.h \
+  /usr/include/_G_config.h /usr/include/wchar.h /usr/include/bits/wchar.h \
+  /usr/include/gconv.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h main.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/syslimits.h \
+  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/include/bits/posix2_lim.h get_audio.h portableio.h lametime.h \
+  /usr/include/sys/types.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
   timestatus.h brhist.h
 
 ../config.h:
 
-/usr/include/gcc/darwin/3.3/assert.h:
+/usr/include/assert.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/gnu/stubs.h:
 
 /usr/include/time.h:
 
-/usr/include/machine/ansi.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stddef.h:
 
-/usr/include/ppc/ansi.h:
+/usr/include/bits/time.h:
 
-/usr/include/gcc/darwin/3.3/machine/limits.h:
+/usr/include/bits/types.h:
 
-/usr/include/ppc/limits.h:
+/usr/include/bits/wordsize.h:
 
-/usr/include/sys/cdefs.h:
+/usr/include/bits/typesizes.h:
 
 ../include/lame.h:
 
 /usr/include/stdio.h:
 
-/usr/include/sys/types.h:
+/usr/include/libio.h:
 
-/usr/include/sys/appleapiopts.h:
+/usr/include/_G_config.h:
 
-/usr/include/machine/types.h:
+/usr/include/wchar.h:
 
-/usr/include/ppc/types.h:
+/usr/include/bits/wchar.h:
 
-/usr/include/machine/endian.h:
+/usr/include/gconv.h:
 
-/usr/include/ppc/endian.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stdarg.h:
 
-/usr/include/gcc/darwin/3.3/stdarg.h:
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
 
 main.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/limits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/syslimits.h:
+
 /usr/include/limits.h:
 
-/usr/include/sys/syslimits.h:
+/usr/include/bits/posix1_lim.h:
+
+/usr/include/bits/local_lim.h:
+
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
 
 get_audio.h:
 
 portableio.h:
 
 lametime.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
 
 timestatus.h:
 

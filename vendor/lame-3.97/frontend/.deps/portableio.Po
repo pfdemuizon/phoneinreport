@@ -1,35 +1,62 @@
 portableio.o portableio.o: portableio.c ../config.h /usr/include/stdio.h \
-  /usr/include/sys/types.h /usr/include/sys/appleapiopts.h \
-  /usr/include/sys/cdefs.h /usr/include/machine/types.h \
-  /usr/include/ppc/types.h /usr/include/machine/ansi.h \
-  /usr/include/ppc/ansi.h /usr/include/machine/endian.h \
-  /usr/include/ppc/endian.h /usr/include/math.h \
-  /usr/include/architecture/ppc/math.h portableio.h
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/gnu/stubs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/wordsize.h \
+  /usr/include/bits/typesizes.h /usr/include/libio.h \
+  /usr/include/_G_config.h /usr/include/wchar.h /usr/include/bits/wchar.h \
+  /usr/include/gconv.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/math.h \
+  /usr/include/bits/huge_val.h /usr/include/bits/mathdef.h \
+  /usr/include/bits/mathcalls.h /usr/include/bits/mathinline.h \
+  portableio.h
 
 ../config.h:
 
 /usr/include/stdio.h:
 
-/usr/include/sys/types.h:
-
-/usr/include/sys/appleapiopts.h:
+/usr/include/features.h:
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/machine/types.h:
+/usr/include/gnu/stubs.h:
 
-/usr/include/ppc/types.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stddef.h:
 
-/usr/include/machine/ansi.h:
+/usr/include/bits/types.h:
 
-/usr/include/ppc/ansi.h:
+/usr/include/bits/wordsize.h:
 
-/usr/include/machine/endian.h:
+/usr/include/bits/typesizes.h:
 
-/usr/include/ppc/endian.h:
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/gconv.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
 
 /usr/include/math.h:
 
-/usr/include/architecture/ppc/math.h:
+/usr/include/bits/huge_val.h:
+
+/usr/include/bits/mathdef.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/mathinline.h:
 
 portableio.h:

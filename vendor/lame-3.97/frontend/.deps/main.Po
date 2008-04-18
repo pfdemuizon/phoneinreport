@@ -1,53 +1,101 @@
-main.o main.o: main.c ../config.h /usr/include/gcc/darwin/3.3/assert.h \
-  /usr/include/stdio.h /usr/include/sys/types.h \
-  /usr/include/sys/appleapiopts.h /usr/include/sys/cdefs.h \
-  /usr/include/machine/types.h /usr/include/ppc/types.h \
-  /usr/include/machine/ansi.h /usr/include/ppc/ansi.h \
-  /usr/include/machine/endian.h /usr/include/ppc/endian.h \
-  /usr/include/stdlib.h /usr/include/alloca.h /usr/include/string.h \
-  /usr/include/fcntl.h /usr/include/sys/fcntl.h ../include/lame.h \
-  /usr/include/gcc/darwin/3.3/stdarg.h brhist.h parse.h main.h \
-  /usr/include/limits.h /usr/include/gcc/darwin/3.3/machine/limits.h \
-  /usr/include/ppc/limits.h /usr/include/sys/syslimits.h get_audio.h \
-  portableio.h timestatus.h
+main.o main.o: main.c ../config.h /usr/include/assert.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/gnu/stubs.h /usr/include/stdio.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/wordsize.h \
+  /usr/include/bits/typesizes.h /usr/include/libio.h \
+  /usr/include/_G_config.h /usr/include/wchar.h /usr/include/bits/wchar.h \
+  /usr/include/gconv.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/stdlib.h \
+  /usr/include/sys/types.h /usr/include/time.h /usr/include/endian.h \
+  /usr/include/bits/endian.h /usr/include/sys/select.h \
+  /usr/include/bits/select.h /usr/include/bits/sigset.h \
+  /usr/include/bits/time.h /usr/include/sys/sysmacros.h \
+  /usr/include/bits/pthreadtypes.h /usr/include/alloca.h \
+  /usr/include/string.h /usr/include/bits/string.h \
+  /usr/include/bits/string2.h /usr/include/fcntl.h \
+  /usr/include/bits/fcntl.h ../include/lame.h brhist.h parse.h main.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/syslimits.h \
+  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+  /usr/include/bits/posix2_lim.h get_audio.h portableio.h timestatus.h
 
 ../config.h:
 
-/usr/include/gcc/darwin/3.3/assert.h:
+/usr/include/assert.h:
 
-/usr/include/stdio.h:
-
-/usr/include/sys/types.h:
-
-/usr/include/sys/appleapiopts.h:
+/usr/include/features.h:
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/machine/types.h:
+/usr/include/gnu/stubs.h:
 
-/usr/include/ppc/types.h:
+/usr/include/stdio.h:
 
-/usr/include/machine/ansi.h:
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stddef.h:
 
-/usr/include/ppc/ansi.h:
+/usr/include/bits/types.h:
 
-/usr/include/machine/endian.h:
+/usr/include/bits/wordsize.h:
 
-/usr/include/ppc/endian.h:
+/usr/include/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/gconv.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
 
 /usr/include/alloca.h:
 
 /usr/include/string.h:
 
+/usr/include/bits/string.h:
+
+/usr/include/bits/string2.h:
+
 /usr/include/fcntl.h:
 
-/usr/include/sys/fcntl.h:
+/usr/include/bits/fcntl.h:
 
 ../include/lame.h:
-
-/usr/include/gcc/darwin/3.3/stdarg.h:
 
 brhist.h:
 
@@ -55,13 +103,19 @@ parse.h:
 
 main.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/limits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/4.1.2/include/syslimits.h:
+
 /usr/include/limits.h:
 
-/usr/include/gcc/darwin/3.3/machine/limits.h:
+/usr/include/bits/posix1_lim.h:
 
-/usr/include/ppc/limits.h:
+/usr/include/bits/local_lim.h:
 
-/usr/include/sys/syslimits.h:
+/usr/include/linux/limits.h:
+
+/usr/include/bits/posix2_lim.h:
 
 get_audio.h:
 
