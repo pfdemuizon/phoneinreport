@@ -20,6 +20,10 @@ class Report < ActiveRecord::Base
     CountryCodes.find_by_numeric(self.country_code)[:name]
   end
 
+  def voice_mail_url
+    self.voice_mail.public_filename
+  end
+
   require 'open-uri'
   def lookup_phone_locale
     uri = "http://www.localcallingguide.com/xmlprefix.php?npa=NPA&nxx=NXX"
