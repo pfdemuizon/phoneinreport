@@ -1,5 +1,6 @@
 class AdminController < ApplicationController
   layout 'admin'
+
   before_filter :login_required, :except => :login
   def login
     return unless request.post?

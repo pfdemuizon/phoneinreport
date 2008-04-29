@@ -1,4 +1,11 @@
 module Admin::ReportsHelper
+  def event_id_form_column(record, input_name)
+    @select_options = Report.incoming_events.collect do |e|
+      [[e['key'][0], e['City'][0], e['State'][0]].join(' - '), e['key']]
+    end
+    select(:record, :event_id, @select_options, {:include_blank => true}, {:name => input_name})
+  end
+
   def mp3_player(report)
     if report.voice_mail
       controller.send(:render_to_string, :partial => "mp3_player", 
