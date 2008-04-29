@@ -1,7 +1,7 @@
 module Admin::ReportsHelper
   def event_id_form_column(record, input_name)
-    @select_options = Report.incoming_events.collect do |e|
-      [[e['key'][0], e['City'][0], e['State'][0]].join(' - '), e['key']]
+    @select_options = @campaign.events.collect do |e|
+      [truncate("#{e['key']}: #{e['City'].capitalize}, #{e['State']} - #{e['Event_Name']}", 40), e['key']]
     end
     select(:record, :event_id, @select_options, {:include_blank => true}, {:name => input_name})
   end
@@ -29,7 +29,6 @@ module Admin::ReportsHelper
     mp3_player(report)
   end
   
-
   def city_form_column(record, input_name)
     text_field(:record, :city) + " Phone city: #{record.phone_city}"
   end

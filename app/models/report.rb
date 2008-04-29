@@ -35,13 +35,6 @@ class Report < ActiveRecord::Base
     end
   end
 
-  def self.incoming_events
-    require 'open-uri'
-    uri = "http://members.greenpeace.org/event/xml/?action=distributed&parent_id=1084"
-    data = XmlSimple.xml_in(open(uri).read)
-    data['event'][0]['item']
-  end
-
 protected
   def geocode_address
     return unless address  # avoid unnecessary geocode if address not set
