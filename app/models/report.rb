@@ -6,8 +6,6 @@ class Report < ActiveRecord::Base
   has_one :voice_mail, :dependent => :destroy
   has_one :reporter, :class_name => 'User'
 
-  validates_presence_of :phone
-
   acts_as_mappable 
   before_validation :geocode_address
   before_save :lookup_phone_locale
@@ -26,6 +24,7 @@ class Report < ActiveRecord::Base
 
   require 'open-uri'
   def lookup_phone_locale
+    return unless self.phone
     uri = "http://www.localcallingguide.com/xmlprefix.php?npa=NPA&nxx=NXX"
     uri.gsub!("NPA", self.phone[0..2])
     uri.gsub!("NXX", self.phone[3..5])
