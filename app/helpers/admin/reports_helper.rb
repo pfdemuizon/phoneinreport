@@ -1,9 +1,12 @@
 module Admin::ReportsHelper
-  def event_id_form_column(record, input_name)
-    @select_options = @campaign.events.collect do |e|
+  def event_select_options
+    @campaign.events.collect do |e|
       [truncate("#{e['key']}: #{e['City'].capitalize}, #{e['State']} - #{e['Event_Name']}", 40), e['key']]
     end
-    select(:record, :event_id, @select_options, {:include_blank => true}, {:name => input_name})
+  end
+
+  def event_id_form_column(record, input_name)
+    select(:record, :event_id, event_select_options, {:include_blank => true}, {:name => input_name})
   end
 
   def mp3_player(report)
