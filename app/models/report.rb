@@ -11,7 +11,7 @@ class Report < ActiveRecord::Base
   before_save :lookup_phone_locale
 
   def address
-    (self.city and self.state and self.country) ? [self.city, self.state, self.country].join(', ') : nil
+    (self.city? and self.state? and self.country?) ? [self.city, self.state, self.country].join(', ') : nil
   end
 
   def country

@@ -7,7 +7,7 @@ class VoiceMailHandler < ActionMailer::Base
       return
     end
     @report = @campaign.reports.build 
-    if email.subject =~ /MaxEmail voice message from (\d*)/
+    if email.subject =~ /MaxEmail voice message from (\d+)/
       @report.phone = $1
     else
       logger.warn("Email subject does not contain a phone number.")
@@ -29,6 +29,8 @@ class VoiceMailHandler < ActionMailer::Base
       end
     end
     @report.voice_mail = @voice_mail if @voice_mail
-    @report.save
+    unless @report.save
+      logger.warn("Report errors: #{@report.errors}")
+    end
   end
 end

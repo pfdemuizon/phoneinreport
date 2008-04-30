@@ -7,4 +7,5 @@ class VoiceMail < ActiveRecord::Base
     has_attachment :storage => :file_system, :content_type => ['audio/wav', 'audio/mp3'], :processor => :mp3_encoder
   end
   validates_as_attachment
+
 end
