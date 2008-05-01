@@ -1,5 +1,15 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
+# Need to test VoiceMailHanlder#receive, but that invokes
+# ActionMailer::Base.receve which expects a raw_email object
+# that is difficult to mock. therefore, simply overwrite
+# this method for this test so we can call our method
+class ActionMailer::Base
+  def receive(mail)
+    new.receive(mail)
+  end
+end
+
 describe VoiceMailHandler do
   before(:each) do
     @email = stub('email', :null_object => true,
@@ -12,16 +22,19 @@ describe VoiceMailHandler do
     )
     @mock_voice_mail = mock_model(VoiceMail, :null_object => true, :save => true)
     @mock_voice_mail_has_one_association = mock('voice_mail_has_on_association', :build => @mock_voice_mail)
-    @mock_report = mock_model(Report, :voice_mail => @mock_voice_mail)
+    @stub_report = stub(Report, :voice_mail => @mock_voice_mail)
     @mock_reports = mock('reports', :build => @mock_report)
     @mock_campaign = mock_model(Campaign, :reports => @mock_reports, :email => @email.to) 
   end
   describe "when receiving voice mails" do
+    def act!
+      VoiceMailHandler.receive(@email) 
+    end
     it "should pull up correct campaign" do
 require 'ruby-debug'
 debugger
       Campaign.should_receive(:find_by_email).with('voicemail@radicaldesigns.org').and_return(@mock_campaign)
-      VoiceMailHandler.receive(@email)
+      act!
     end
     it "should pull phone number from subject" do
       #@report.should_receive(:phone).with('4152790322')
