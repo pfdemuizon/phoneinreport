@@ -28,7 +28,7 @@ class VoiceMail < ActiveRecord::Base
  
   def parse_max_email_ref_num(body)
     body =~ /The reference number for this message is (\d+-\w+)./
-    $1 ? $1 : "unknown"
+    $1 ? $1 : "unknown reference number"
   end
 
   def detach_attachment(email)
