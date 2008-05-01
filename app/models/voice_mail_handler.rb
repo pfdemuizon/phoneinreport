@@ -19,6 +19,11 @@ class VoiceMailHandler < ActionMailer::Base
         next unless attachment.content_type == "audio/wav"
         @voice_mail = VoiceMail.new
         @voice_mail.uploaded_data = attachment
+        if email.body =~ /The reference number for this message is (\d+-\w+)./
+          @voice_mail.max_email_ref_num = $1
+        else
+          logger.warn("Email subject does not contain a phone number.")
+        end
         if @voice_mail.valid?
           logger.info("Saving attachment...")
           @voice_mail.save
