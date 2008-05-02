@@ -1,7 +1,7 @@
 module Admin::ReportsHelper
   def event_select_options
     @campaign.events.collect do |e|
-      [truncate("#{e['key']}: #{e['City'].capitalize}, #{e['State']} - #{e['Event_Name']}", 40), e['key']]
+      [truncate("#{e['key']}: #{e['State']}, #{e['City'].capitalize} - #{e['Event_Name']}", 40), e['key']]
     end
   end
 

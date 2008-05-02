@@ -6,13 +6,14 @@ class Campaign < ActiveRecord::Base
   validates_associated :mail_config
   cattr_accessor :current
 
-  # do some local caching of events to avoid time-consuming 
-  # pull from event feed.  this only works in production mode where 
+  # do some local caching of events to avoid time-consuming pull 
+  # from event feed.  this only works in production mode where 
   # config.cache_classes = true 
   @@events_cache = nil
   def events
     return unless self.event_feed_url
-    if @@events_cache.nil? || event_cache_expired?
+    if @@events_cache.nil? || events_cache_expired?
+      require 'open-uri' # for open
       return unless @@events_cache = Hash.from_xml(open(self.event_feed_url))
       update_attribute(:events_cache_expire, 1.hour.from_now)
     end
@@ -21,7 +22,7 @@ class Campaign < ActiveRecord::Base
 
 protected
   def events_cache_expired?
-    return true unless self.event_feed_cache_expire
-    Time.now > self.event_feed_cache_expire
+    return true unless self.events_cache_expire
+    Time.now > self.events_cache_expire
   end
 end

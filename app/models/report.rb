@@ -7,7 +7,7 @@ class Report < ActiveRecord::Base
   has_one :reporter, :class_name => 'User'
 
   acts_as_mappable 
-  before_validation :geocode_address
+  before_validation :set_event, :geocode_address
   before_save :lookup_phone_locale
 
   def address
@@ -32,8 +32,7 @@ class Report < ActiveRecord::Base
   
   require 'open-uri'
   def lookup_phone_locale
-    return unless self.voice_mail.phone?
-    phone = self.voice_mail.phone
+    return if (phone.to_i == 0) # only run this method if phone contains a number
     data = XmlSimple.xml_in(open(local_calling_guide_url(phone)))
     if data['prefixdata'] && data['prefixdata'][0] 
       self.phone_city = data['prefixdata'][0]['rc'][0] if data['prefixdata'][0]['rc']
@@ -41,15 +40,26 @@ class Report < ActiveRecord::Base
     end
   end
 
-protected
   def local_calling_guide_url(phone)
+    return if (phone.to_i == 0) # only run this method if phone contains a number
     uri = "http://www.localcallingguide.com/xmlprefix.php?npa=NPA&nxx=NXX"
     uri.gsub("NPA", phone[0..2]).gsub("NXX", phone[3..5])
   end
 
+protected
+
+  def set_event 
+    (@event = campaign.events.detect {|e| e['key'] == self.event_id.to_s}) if self.event_id
+  end
+
   def geocode_address
-    if self.event_id 
-      @event = @campaigns.events {|e| e.key == self.event_id}
+    if @event 
+      if (@event['Latitude'].to_i == 0) || (@event['Longitude'].to_i == 0)
+        self.latitude = self.longitude = nil
+      else
+        self.latitude, self.longitude = @event['Latitude'], @event['Longitude']
+        return
+      end
     end
     return unless address  # avoid unnecessary geocode if address not set
     geo = GeoKit::Geocoders::MultiGeocoder.geocode(address)
