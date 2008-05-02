@@ -8,9 +8,10 @@ class VoiceMail < ActiveRecord::Base
   end
   validates_as_attachment 
 
-  def initialize(email=nil)
-    super
-    return unless email
+  # http://blog.hasmanythrough.com/2007/1/22/using-faux-accessors-to-initialize-values
+  # apparently, bad things happen when you override ActiveRecord initialize
+  # so use faux accessors as implemented with def email=(email)
+  def email=(email)
     self.created_at = email.date.to_time
     self.phone = parse_phone(email.subject)
     self.max_email_ref_num = parse_max_email_ref_num(email.body)

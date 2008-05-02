@@ -7,15 +7,10 @@ class VoiceMailHandler < ActionMailer::Base
       return 
     end
 
-    # build report 
-    @report = @campaign.reports.build(email)
-
-    # create voice mail
-    unless @voice_mail = VoiceMail.create(email)
+    @report = @campaign.reports.build
+    unless @voice_mail = VoiceMail.create(:email => email)
       logger.warn("Error saving voice mail: #{@voice_mail.errors}")
     end
-
-    # connect voice mail to report
     @report.voice_mail = @voice_mail if @voice_mail
     unless @report.save
       logger.warn("Report errors: #{@report.errors}") 

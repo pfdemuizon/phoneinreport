@@ -24,11 +24,9 @@ class Report < ActiveRecord::Base
 
   require 'open-uri'
   def lookup_phone_locale
-    return unless self.phone
-    uri = "http://www.localcallingguide.com/xmlprefix.php?npa=NPA&nxx=NXX"
-    uri.gsub!("NPA", self.phone[0..2])
-    uri.gsub!("NXX", self.phone[3..5])
-    data = XmlSimple.xml_in(open(uri))
+    phone = self.voice_mail.phone
+    return unless phone
+    data = XmlSimple.xml_in(open(local_calling_guide_url(phone)))
     if data['prefixdata'] && data['prefixdata'][0] 
       self.phone_city = data['prefixdata'][0]['rc'][0] if data['prefixdata'][0]['rc']
       self.phone_state = data['prefixdata'][0]['region'][0] if data['prefixdata'][0]['region']
@@ -36,6 +34,11 @@ class Report < ActiveRecord::Base
   end
 
 protected
+  def local_calling_guide_url(phone)
+    uri = "http://www.localcallingguide.com/xmlprefix.php?npa=NPA&nxx=NXX"
+    uri.gsub("NPA", phone[0..2]).gsub("NXX", phone[3..5])
+  end
+
   def geocode_address
     return unless address  # avoid unnecessary geocode if address not set
     geo = GeoKit::Geocoders::MultiGeocoder.geocode(address)
