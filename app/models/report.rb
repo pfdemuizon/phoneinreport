@@ -22,10 +22,18 @@ class Report < ActiveRecord::Base
     self.voice_mail.public_filename
   end
 
+  def phone
+    self.voice_mail.phone
+  end
+
+  def phone=(phone)
+    self.voice_mail.update_attribute(:phone, phone)
+  end
+  
   require 'open-uri'
   def lookup_phone_locale
+    return unless self.voice_mail.phone?
     phone = self.voice_mail.phone
-    return unless phone
     data = XmlSimple.xml_in(open(local_calling_guide_url(phone)))
     if data['prefixdata'] && data['prefixdata'][0] 
       self.phone_city = data['prefixdata'][0]['rc'][0] if data['prefixdata'][0]['rc']
@@ -40,6 +48,9 @@ protected
   end
 
   def geocode_address
+    if self.event_id 
+      @event = @campaigns.events {|e| e.key == self.event_id}
+    end
     return unless address  # avoid unnecessary geocode if address not set
     geo = GeoKit::Geocoders::MultiGeocoder.geocode(address)
     errors.add(:address, "Could not Geocode address") if !geo.success

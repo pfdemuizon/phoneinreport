@@ -1,10 +1,10 @@
 class Admin::ReportsController < AdminController
   active_scaffold :report do |config|
-    config.columns.add :country
+    config.columns.add :phone
     config.list.columns = [:created_at, :event_id, :file_status, :phone, 
-        :voice_mail, :latitude, :longitude, :city, :state, :country]
+        :voice_mail, :latitude, :longitude, :city, :state]
     config.update.columns = [:voice_mail, :created_at, :file_status, 
-        :reporter_name, :phone, :event_id, :city, :state, :country_code, :notes]
+        :reporter_name, :phone, :event_id, :city, :state, :notes]
     config.list.sorting = [{:file_status => :asc}, {:created_at => :desc}]
   	config.actions.exclude :create
 

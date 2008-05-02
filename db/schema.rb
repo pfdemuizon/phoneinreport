@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 18) do
+ActiveRecord::Schema.define(:version => 19) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "event_feed_url"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 18) do
     t.integer  "site_id"
     t.string   "permalink"
     t.boolean  "current"
-    t.datetime "event_feed_cache_expire"
+    t.datetime "events_cache_expire"
   end
 
   create_table "mail_configs", :force => true do |t|
