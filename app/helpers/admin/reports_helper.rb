@@ -40,6 +40,14 @@ module Admin::ReportsHelper
     select(:record, :country_code, CountryCodes::countries_for_select('name', 'numeric').sort, {}, {:name => input_name})
   end
 
+  def latitude_form_column(report, input_name)
+    report.latitude
+  end
+  
+  def longitude_form_column(report, input_name)
+    report.longitude
+  end
+  
   def created_at_form_column(report, input_name)
     report.created_at.strftime("%m/%d/%Y %I:%M%p")
   end

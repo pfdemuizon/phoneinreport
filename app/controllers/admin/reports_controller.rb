@@ -4,8 +4,10 @@ class Admin::ReportsController < AdminController
     config.list.columns = [:created_at, :event_id, :file_status, :phone, 
         :voice_mail, :latitude, :longitude, :city, :state]
     config.update.columns = [:voice_mail, :created_at, :file_status, 
-        :reporter_name, :phone, :event_id, :city, :state, :notes]
+        :reporter_name, :phone, :event_id, :city, :state, :latitude, :longitude, :notes]
     config.list.sorting = [{:file_status => :asc}, {:created_at => :desc}]
+    config.show.columns = [:voice_mail, :created_at, :file_status, 
+        :reporter_name, :phone, :event_id, :city, :state, :latitude, :longitude, :notes]
   	config.actions.exclude :create
 
     config.columns[:file_status].label = "Report status"

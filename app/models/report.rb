@@ -54,7 +54,7 @@ protected
 
   def geocode_address
     if @event 
-      if (@event['Latitude'].to_i == 0) || (@event['Longitude'].to_i == 0)
+      if (@event['Latitude'].to_f == 0.0) || (@event['Longitude'].to_f == 0.0)
         self.latitude = self.longitude = nil
       else
         self.latitude, self.longitude = @event['Latitude'], @event['Longitude']
@@ -64,6 +64,6 @@ protected
     return unless address  # avoid unnecessary geocode if address not set
     geo = GeoKit::Geocoders::MultiGeocoder.geocode(address)
     errors.add(:address, "Could not Geocode address") if !geo.success
-    self.latitude, self.longitude = geo.lat, geo.lng if geo.success
+    self.latitude, self.longitude = geo.success ? [geo.lat, geo.lng] : [nil, nil]
   end
 end
