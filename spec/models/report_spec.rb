@@ -54,5 +54,20 @@ describe Report do
       @report.latitude.should == @events_data.first["Latitude"].to_f
       @report.longitude.should == @events_data.first["Longitude"].to_f
     end
+
+    it "should set lat/lng to nil if no event is selected and city/state not specified" do
+      act!
+      @report.event_id = nil
+      @report.city = ""
+      @report.state = ""
+      act!
+      @report.latitude.should == nil
+      @report.longitude.should == nil
+    end
+
+    it "should set file status to 'tagged and geocoded' if report has been tagged and geocoded" do
+      act!
+      @report.file_status.should == "tagged_and_geocoded"
+    end
   end
 end

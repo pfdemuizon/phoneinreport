@@ -8,10 +8,10 @@ class Report < ActiveRecord::Base
 
   acts_as_mappable 
   before_validation :set_event, :geocode_address
-  before_save :lookup_phone_locale
+  before_save :lookup_phone_locale, :update_status
 
   def address
-    (self.city? and self.state? and self.country_code?) ? [self.city, self.state, self.country].join(', ') : nil
+    tagged? ? [self.city, self.state, self.country].join(', ') : nil
   end
 
   def country
@@ -46,6 +46,22 @@ class Report < ActiveRecord::Base
     uri.gsub("NPA", phone[0..2]).gsub("NXX", phone[3..5])
   end
 
+  def tagged?
+    (self.city? && self.state? && self.country_code?)
+  end
+
+  def geocoded?
+    (self.latitude && self.latitude != 0.0 && self.longitude && self.longitude != 0.0)
+  end
+
+  def event_lat_lng
+    if (@event['Latitude'].to_f == 0.0) || (@event['Longitude'].to_f == 0.0)
+      [nil,nil]
+    else
+      [@event['Latitude'], @event['Longitude']]
+    end
+  end
+
 protected
 
   def set_event 
@@ -53,17 +69,20 @@ protected
   end
 
   def geocode_address
-    if @event 
-      if (@event['Latitude'].to_f == 0.0) || (@event['Longitude'].to_f == 0.0)
-        self.latitude = self.longitude = nil
-      else
-        self.latitude, self.longitude = @event['Latitude'], @event['Longitude']
-        return
-      end
+    if @event
+      self.latitude, self.longitude = event_lat_lng 
+      return if self.latitude && self.longitude
     end
-    return unless address  # avoid unnecessary geocode if address not set
-    geo = GeoKit::Geocoders::MultiGeocoder.geocode(address)
-    errors.add(:address, "Could not Geocode address") if !geo.success
-    self.latitude, self.longitude = geo.success ? [geo.lat, geo.lng] : [nil, nil]
+    if tagged? 
+      geo = GeoKit::Geocoders::MultiGeocoder.geocode(address)
+      errors.add(:address, "Could not Geocode address") if !geo.success
+      self.latitude, self.longitude = geo.success ? [geo.lat, geo.lng] : [nil, nil]
+      return
+    end
+    self.latitude, self.longitude = nil, nil
+  end
+
+  def update_status
+    self.file_status = "tagged_and_geocoded" if tagged? && geocoded?
   end
 end
