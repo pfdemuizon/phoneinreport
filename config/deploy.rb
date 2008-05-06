@@ -21,7 +21,7 @@ after "deploy:update_code", "deploy:symlink_shared"
 
 namespace :deploy do
   task :start, :roles => :app do
-    #invoke_command "monit -g actionecho start all", :via => run_method
+    #invoke_command "monit start mail_fetcher", :via => run_method
     invoke_command "mongrel_rails cluster::restart", :via => run_method
   end
 
