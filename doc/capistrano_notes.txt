@@ -1,0 +1,17 @@
+adduser phoneinreport (should create /home/phoneinreport)
+cd /home/phoneinreport
+ssh-keygen -t dsa
+(generate ssh key pair; copy public key to github)
+su root
+visudo (add phoneinreport)
+
+capify .
+
+edit config/deploy.rb
+	set :scm git
+	set :repository, "git@github.com:pfdemuizon/phoneinreport.git"
+	set :branch "master"
+	set :deploy_via, :remote_cache
+
+  set :runner, "phoneinreport"
+	set :deploy_to "/home/phoneinreport/#{application}"
