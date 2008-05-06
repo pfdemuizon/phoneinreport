@@ -15,3 +15,5 @@ edit config/deploy.rb
 
   set :runner, "phoneinreport"
 	set :deploy_to "/home/phoneinreport/#{application}"
+
+testing
