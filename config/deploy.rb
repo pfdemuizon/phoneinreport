@@ -21,11 +21,13 @@ after "deploy:update_code", "deploy:symlink_shared"
 
 namespace :deploy do
   task :start, :roles => :app do
-    invoke_command "monit -g actionecho start all", :via => run_method
+    #invoke_command "monit -g actionecho start all", :via => run_method
+    invoke_command "mongrel_rails cluster::restart", :via => run_method
   end
 
   task :symlink_shared, :roles => :app, :except => {:no_symlink => true} do 
     invoke_command "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     invoke_command "ln -nfs #{shared_path}/config/mongrel_cluster.yml #{release_path}/config/mongrel_cluster.yml"
+    invoke_command "ln -nfs #{shared_path}/config/amazon_s3.yml #{release_path}/config/amazon_s3.yml"
   end
 end
