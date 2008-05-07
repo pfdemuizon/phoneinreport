@@ -1,0 +1,10 @@
+<dl>
+  <dt>
+    <label>Event</label>
+  </dt>
+  <dd> 
+  <div class='hidden'><%= javascript_tag "state_codes = #{event_id_to_state.to_json}; city_codes = #{event_id_to_city.to_json}" %></div>
+    <%= event_id_form_column(@record, "record[event_id]") %>
+    <%= observe_field("report_event_id", :function => "if (value != \"\") {$('record_city').value = city_codes[value]; $('record_state').value = state_codes[value];}") %>
+  </dd>
+</dl>
