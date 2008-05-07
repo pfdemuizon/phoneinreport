@@ -56,7 +56,7 @@ class Report < ActiveRecord::Base
 
   def event_lat_lng
     if (@event['Latitude'].to_f == 0.0) || (@event['Longitude'].to_f == 0.0)
-      [nil,nil]
+      [nil, nil]
     else
       [@event['Latitude'], @event['Longitude']]
     end
@@ -83,6 +83,11 @@ protected
   end
 
   def update_status
-    self.file_status = "tagged_and_geocoded" if tagged? && geocoded?
+    return if file_status == "junk"
+    self.file_status = case
+      when tagged? && geocoded?: "tagged_and_geocoded"
+      when tagged?: "tagged"
+      else file_status
+      end
   end
 end

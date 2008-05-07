@@ -1,12 +1,12 @@
 module Admin::ReportsHelper
   def event_select_options
     @campaign.events.collect do |e|
-      [truncate("#{e['key']}: #{e['State']}, #{e['City'].capitalize} - #{e['Event_Name']}", 40), e['key']]
+      [truncate("#{e['key']}: #{e['State']}, #{e['City'].capitalize} - #{e['Event_Name']}", 40), e['key'].to_i]
     end
   end
 
-  def event_id_form_column(record, input_name)
-    select(:record, :event_id, event_select_options, {:include_blank => true}, {:name => input_name})
+  def event_id_form_column(report, input_name)
+    select(:report, :event_id, event_select_options, {:include_blank => true, :selected => report.event_id}, {:name => input_name})
   end
 
   def mp3_player(report)
@@ -17,11 +17,11 @@ module Admin::ReportsHelper
   end
 
   def file_status_column(report)
-    report.file_status.humanize
+    report.file_status.humanize if report.file_status
   end
  
   def file_status_form_column(report, input_name)
-    select(:report, :file_status, Report::FILE_STATUS.map{|f| [f.humanize, f]}, {}, {:name => input_name})
+    select(:report, :file_status, Report::FILE_STATUS.map{|f| [f.humanize, f]}, {:selected => report.file_status}, {:name => input_name})
   end
 
   def voice_mail_column(report)
@@ -32,12 +32,12 @@ module Admin::ReportsHelper
     mp3_player(report)
   end
   
-  def city_form_column(record, input_name)
-    text_field(:record, :city) + " Phone city: #{record.phone_city}"
+  def city_form_column(report, input_name)
+    text_field(:report, :city) + " Phone city: #{report.phone_city}"
   end
 
-  def country_code_form_column(record, input_name)
-    select(:record, :country_code, CountryCodes::countries_for_select('name', 'numeric').sort, {}, {:name => input_name})
+  def country_code_form_column(report, input_name)
+    select(:report, :country_code, CountryCodes::countries_for_select('name', 'numeric').sort, {}, {:name => input_name})
   end
 
   def latitude_form_column(report, input_name)
