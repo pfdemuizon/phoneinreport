@@ -34,4 +34,12 @@
 </div>
 
 </body>
+<%= yield :javascript %>  
+<% if onload_script = yield( :javascript_onload )-%>                                                                 
+  <script type='text/javascript'>                                                                                    
+    Event.observe( document, 'dom:loaded', function() {                                                              
+      <%= onload_script %>                                                                                           
+    } );                                                                                                             
+  </script>                                                                                                          
+<% end -%>
 </html>

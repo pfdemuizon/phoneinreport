@@ -5,6 +5,18 @@ module Admin::ReportsHelper
     end
   end
 
+  def event_id_to_city
+    map = {}
+    @campaign.events.each {|e| map[e['key']] = e['City']}
+    map 
+  end
+
+  def event_id_to_state
+    map = {}
+    @campaign.events.each {|e| map[e['key']] = e['State']}
+    map 
+  end
+
   def event_id_form_column(report, input_name)
     select(:report, :event_id, event_select_options, {:include_blank => true, :selected => report.event_id}, {:name => input_name})
   end
