@@ -20,7 +20,7 @@ module Technoweenie # :nodoc:
               wav_file = audio_file.clone
               audio_file.sub! /wav$/, 'mp3'
               RAILS_DEFAULT_LOGGER.info("lame -b 32 --resample 22050 #{wav_file} #{audio_file} 2>&1")
-              RAILS_DEFAULT_LOGGER.info(`lame -b 32 --resample 22050 #{wav_file} #{audio_file} 2>&1`)
+              RAILS_DEFAULT_LOGGER.info(`/usr/local/bin/lame -b 32 --resample 22050 #{wav_file} #{audio_file} 2>&1`)
               File.delete(wav_file)
               content_type.sub!(/wav$/, 'mp3')
               filename.sub! /wav$/, 'mp3'
