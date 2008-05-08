@@ -8,7 +8,7 @@ class MailFetcherDaemon < Daemon::Base
 
   def self.start
     non_options = %w(id campaign_id created_at updated_at)
-    puts "Starting MailFetcherDaemon"
+    puts "Starting MailFetcherDaemon: #{RAILS_ENV}"
 
     @fetchers = []
     Site.find(:all).each do |s|
