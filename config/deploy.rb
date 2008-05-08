@@ -14,7 +14,6 @@ role :app, "slicehost.radicaldesigns.org"
 role :web, "slicehost.radicaldesigns.org"
 role :db,  "slicehost.radicaldesigns.org", :primary => true
 
-set :branch, "master"
 set :deploy_via, :remote_cache
 
 after "deploy:update_code", "deploy:symlink_shared"
