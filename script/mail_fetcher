@@ -1,13 +1,14 @@
 #!/usr/bin/env ruby
-require File.dirname(__FILE__) + '/../config/environment.rb'
+RAILS_ENV = ENV['RAILS_ENV'] || 'production'
+require File.expand_path(File.dirname(__FILE__) + '/../config/boot.rb')
+require File.expand_path(File.dirname(__FILE__) + '/../config/environment.rb')
 
 class MailFetcherDaemon < Daemon::Base
-
   @sleep_time = (RAILS_ENV == 'production' ? 30 : 10)
 
   def self.start
     non_options = %w(id campaign_id created_at updated_at)
-    puts "Starting MailFetcherDaemon"
+    puts "Starting MailFetcherDaemon: #{RAILS_ENV}"
 
     @fetchers = []
     Site.find(:all).each do |s|
