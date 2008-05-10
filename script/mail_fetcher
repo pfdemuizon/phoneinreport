@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-RAILS_ENV = ENV['RAILS_ENV'] || 'development'
+RAILS_ENV = ENV['RAILS_ENV'] || 'production'
 require File.expand_path(File.dirname(__FILE__) + '/../config/boot.rb')
 require File.expand_path(File.dirname(__FILE__) + '/../config/environment.rb')
 ActiveRecord::Base.logger = Logger.new(File.join(RAILS_ROOT,'log', 'mail_fetcher.log'))
