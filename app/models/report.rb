@@ -1,5 +1,5 @@
 class Report < ActiveRecord::Base
-  FILE_STATUS = %w(pending tagged tagged_and_geocoded junk unpublished) 
+  FILE_STATUS = %w(pending tagged tagged_and_geocoded unpublished junk) 
   COUNTRY_CODE_USA = CountryCodes.find_by_name('United States of America')[:numeric]
 
   belongs_to :campaign
