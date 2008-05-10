@@ -69,5 +69,17 @@ describe Report do
       act!
       @report.file_status.should == "tagged_and_geocoded"
     end
+
+    it "should not over-ride status when set to unpublish" do
+      @report.file_status = "unpublished"
+      act!
+      @report.file_status.should == "unpublished"
+    end
+
+    it "should not over-ride status when set to junk" do
+      @report.file_status = "junk"
+      act!
+      @report.file_status.should == "junk"
+    end
   end
 end

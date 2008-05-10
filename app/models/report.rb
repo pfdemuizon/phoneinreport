@@ -1,5 +1,5 @@
 class Report < ActiveRecord::Base
-  FILE_STATUS = %w(pending tagged tagged_and_geocoded junk) 
+  FILE_STATUS = %w(pending tagged tagged_and_geocoded junk unpublished) 
   COUNTRY_CODE_USA = CountryCodes.find_by_name('United States of America')[:numeric]
 
   belongs_to :campaign
@@ -83,7 +83,7 @@ protected
   end
 
   def update_status
-    return if file_status == "junk"
+    return if (file_status == "junk" || file_status == "unpublished")
     self.file_status = case
       when tagged? && geocoded?: "tagged_and_geocoded"
       when tagged?: "tagged"
