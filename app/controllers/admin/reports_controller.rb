@@ -10,6 +10,8 @@ class Admin::ReportsController < AdminController
         :reporter_name, :phone, :event_id, :city, :state, :latitude, :longitude, :notes]
   	config.actions.exclude :create
 
+    config.columns[:phone].sort_by :sql => "voice_mails.phone"
+
     config.columns[:file_status].label = "Report status"
     config.columns[:reporter_name].label = "Person's name"
   end
