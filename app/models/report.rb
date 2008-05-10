@@ -32,12 +32,14 @@ class Report < ActiveRecord::Base
   
   require 'open-uri'
   def lookup_phone_locale
-    return if (phone.to_i == 0) # only run this method if phone contains a number
-    data = XmlSimple.xml_in(open(local_calling_guide_url(phone)))
+    logger.error("In before_save: lookup_phone_locale")
+    return true if (phone.to_i == 0) # only run this method if phone contains a number
+    data = XmlSimple.xml_in(open(local_calling_guide_url(phone)).read)
     if data['prefixdata'] && data['prefixdata'][0] 
       self.phone_city = data['prefixdata'][0]['rc'][0] if data['prefixdata'][0]['rc']
       self.phone_state = data['prefixdata'][0]['region'][0] if data['prefixdata'][0]['region']
     end
+    return true
   end
 
   def local_calling_guide_url(phone)
@@ -65,29 +67,35 @@ class Report < ActiveRecord::Base
 protected
 
   def set_event 
+    logger.error("In before_validation: set_event")
     (@event = campaign.events.detect {|e| e['key'] == self.event_id.to_s}) if self.event_id
+    return true
   end
 
   def geocode_address
+    logger.error("In before_validation: geocode_address")
     if @event
       self.latitude, self.longitude = event_lat_lng 
-      return if self.latitude && self.longitude
+      return true if self.latitude && self.longitude
     end
     if tagged? 
       geo = GeoKit::Geocoders::MultiGeocoder.geocode(address)
       errors.add(:address, "Could not Geocode address") if !geo.success
       self.latitude, self.longitude = geo.success ? [geo.lat, geo.lng] : [nil, nil]
-      return
+      return true
     end
     self.latitude, self.longitude = nil, nil
+    return true
   end
 
   def update_status
-    return if (file_status == "junk" || file_status == "unpublished")
+    logger.error("In before_save: update_status")
+    return true if (file_status == "junk" || file_status == "unpublished")
     self.file_status = case
       when tagged? && geocoded?: "tagged_and_geocoded"
       when tagged?: "tagged"
       else file_status
       end
+    return true
   end
 end

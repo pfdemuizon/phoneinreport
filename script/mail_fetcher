@@ -1,8 +1,10 @@
 #!/usr/bin/env ruby
-RAILS_ENV = ENV['RAILS_ENV'] || 'production'
+RAILS_ENV = ENV['RAILS_ENV'] || 'development'
 require File.expand_path(File.dirname(__FILE__) + '/../config/boot.rb')
 require File.expand_path(File.dirname(__FILE__) + '/../config/environment.rb')
-ActiveRecord::Base.logger = Logger.new(File.join(RAILS_ROOT,'log', 'mail_fetcher.log'))
+logger = Logger.new(File.join(RAILS_ROOT,'log', 'mail_fetcher.log'))
+ActiveRecord::Base.logger = logger
+ActionMailer::Base.logger = logger
 
 class MailFetcherDaemon < Daemon::Base
   @sleep_time = (RAILS_ENV == 'production' ? 30 : 10)
