@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-RAILS_ENV = ENV['RAILS_ENV'] || 'production'
+RAILS_ENV = ENV['RAILS_ENV'] || 'development'
 require File.expand_path(File.dirname(__FILE__) + '/../config/boot.rb')
 require File.expand_path(File.dirname(__FILE__) + '/../config/environment.rb')
 ActiveRecord::Base.logger = Logger.new(File.join(RAILS_ROOT,'log', 'mail_fetcher.log'))
@@ -21,6 +21,16 @@ class MailFetcherDaemon < Daemon::Base
     end
 
     loop do
+      begin
+        Site.count
+      rescue ActiveRecord::StatementInvalid
+        ActiveRecord::Base.connection.reconnect!
+        unless @retried_connection
+          @retried_connection = true
+          retry
+        end
+        raise
+      end
       @fetchers.each do |f|
         f.fetch
         sleep(@sleep_time)
