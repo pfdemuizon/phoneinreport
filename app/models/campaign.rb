@@ -11,10 +11,12 @@ class Campaign < ActiveRecord::Base
   # config.cache_classes = true 
   @@events_cache = nil
   def events
-    return unless self.event_feed_url
+    return [] unless self.event_feed_url
     if @@events_cache.nil? || events_cache_expired?
       require 'open-uri' # for open
-      return unless @@events_cache = Hash.from_xml(open(self.event_feed_url))
+      events = Hash.from_xml(open(self.event_feed_url).read)
+      return [] unless events['data']['event']['item']
+      @@events_cache = events
       update_attribute(:events_cache_expire, 1.hour.from_now)
     end
     @@events_cache['data']['event']['item']
